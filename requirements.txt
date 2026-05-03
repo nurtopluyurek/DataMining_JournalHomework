@@ -1,0 +1,16 @@
+pandas
+numpy
+scipy
+scikit-learn
+matplotlib
+seaborn
+plotly
+streamlit
+sentence-transformers
+transformers
+torch
+joblib
+beautifulsoup4
+nltk
+nbformat
+jupyter

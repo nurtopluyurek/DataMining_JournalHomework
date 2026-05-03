@@ -1,0 +1,5 @@
+model,top_1_accuracy,top_3_hit_rate,top_5_hit_rate
+TFIDF,0.2701,0.467,0.568
+BERT,0.2716,0.4816,0.589
+HYBRID,0.2684,0.4792,0.587
+ENSEMBLE,0.2888,0.4957,0.6058
