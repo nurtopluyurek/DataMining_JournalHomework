@@ -63,7 +63,7 @@ A semantic recommender built with `all-MiniLM-L6-v2`, used to capture contextual
 A score-level fusion of the lexical and semantic models:
 
 \[
-S_{ensemble} = 0.5 \, S_{tfidf} + 0.5 \, S_{bert}
+S_ensemble = 0.5 * S_tfidf + 0.5 * S_bert
 \]
 
 This model is retained as an important comparison baseline, although the best final result in this repository is achieved by TF-IDF.
