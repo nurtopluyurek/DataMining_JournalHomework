@@ -1,174 +1,74 @@
-# Data Mining Final Project
+# Computer Science Journal Recommendation Project
 
-This project implements a computer science journal recommendation system and an interpretable topic clustering pipeline over the provided SQLite database.
+This project builds a journal recommendation system for computer science articles and an interpretable topic clustering pipeline using the provided scholarly metadata database.
 
-The recommendation layer now includes:
+## Project Scope
+
+The system recommends the top 5 journals for a user-provided abstract and explains the result with keywords, similar articles, confidence scores, and cluster information.
+
+The project includes:
 
 - TF-IDF recommender
-- Sentence-BERT semantic recommender
-- TF-IDF + BERT ensemble recommender
-- Explainable recommendation payloads with keywords, evidence articles, cluster labels, and confidence scores
+- Sentence-BERT recommender
+- TF-IDF + BERT ensemble
+- explainable outputs
+- ablation study
+- per-journal analysis
+- confusion analysis
+- class imbalance analysis
+- confidence analysis
+- topic clustering
+- notebook, report draft, and generated outputs
 
-The academic analysis layer now also includes:
+## Dataset
 
-- ablation study across multiple input representations
-- per-journal Top-5 performance analysis
-- confusion analysis for rank-1 journal mistakes
-- class imbalance analysis and visualization
-- explicit final model selection discussion
+The assignment PDF mentions `7711` articles from `175` journals, but the accessible SQLite database contains:
 
-## What is included
+- `23,801` total records
+- `466` journals
 
-- [Notebook](/C:/Users/toplu/Documents/Codex/2026-04-26/files-mentioned-by-the-user-compsciencepub/notebooks/data_mining_final_project.ipynb)
-- [Project library](/C:/Users/toplu/Documents/Codex/2026-04-26/files-mentioned-by-the-user-compsciencepub/src/project_lib.py)
-- [Asset builder](/C:/Users/toplu/Documents/Codex/2026-04-26/files-mentioned-by-the-user-compsciencepub/scripts/build_project_assets.py)
-- [IEEE report draft](/C:/Users/toplu/Documents/Codex/2026-04-26/files-mentioned-by-the-user-compsciencepub/report/ieee_final_project.tex)
-- [Generated figures and tables](/C:/Users/toplu/Documents/Codex/2026-04-26/files-mentioned-by-the-user-compsciencepub/outputs)
+After filtering to `Article` records with non-empty abstracts and journals with at least `5` samples, the final recommendation dataset contains about:
 
-## Dataset assumptions
+- `21,907` articles
+- `404` journals
 
-- Primary data source: `C:\Users\toplu\Downloads\CompSciencePub (1).sqlite`
-- The assignment PDF says `7711` articles from `175` journals.
-- The accessible SQLite file actually contains `23801` records from `466` journals.
-- The supervised modeling subset filters to `21907` article records with abstracts and journals having at least 5 examples.
+## Main Results
 
-## Main results
+Evaluation was done with a stratified `80/20` split using abstract-only query input.
 
-- TF-IDF recommender: `Top-1 = 0.3389`, `Top-3 = 0.5244`, `Top-5 = 0.6027`
-- BERT recommender: `Top-1 = 0.2752`, `Top-3 = 0.4411`, `Top-5 = 0.5358`
-- Ensemble recommender: `Top-1 = 0.2809`, `Top-3 = 0.4507`, `Top-5 = 0.5418`
+- TF-IDF: `Top-1 = 0.3389`, `Top-3 = 0.5244`, `Top-5 = 0.6027`
+- BERT: `Top-1 = 0.2752`, `Top-3 = 0.4411`, `Top-5 = 0.5358`
+- Ensemble: `Top-1 = 0.2809`, `Top-3 = 0.4507`, `Top-5 = 0.5418`
 
-On this dataset, the tuned TF-IDF model remains the strongest deployment model.  
-The BERT and ensemble layers still add semantic retrieval and more explainable evidence for similar-article support.
+TF-IDF is the final deployable model because it performs best on all main metrics. BERT and Ensemble are kept as semantic comparison baselines.
 
-## Stronger Academic Analysis
+## Clustering
 
-### Ablation Study
+Topic clustering is built with TF-IDF, TruncatedSVD, and KMeans.
 
-The project compares these input representations with the same TF-IDF recommendation pipeline:
+The cluster count `k` was rescanned from `10` to `60` and selected using the highest silhouette score.
 
-- `abstract only`
-- `title + abstract`
-- `abstract + keywords`
-- `abstract + keywords + subjects`
-- `full combined_text`
+- Final `k = 60`
+- Best silhouette score = `0.1105`
 
-Generated files:
+## Important Files
 
-- [Ablation table](/C:/Users/toplu/Documents/Codex/2026-04-26/files-mentioned-by-the-user-compsciencepub/outputs/tables/ablation_results.csv)
-- [Ablation chart](/C:/Users/toplu/Documents/Codex/2026-04-26/files-mentioned-by-the-user-compsciencepub/outputs/figures/ablation_comparison.png)
+- `notebooks/data_mining_final_project.ipynb`
+- `src/project_lib.py`
+- `scripts/build_project_assets.py`
+- `scripts/generate_notebook.py`
+- `report/ieee_final_project.tex`
+- `outputs/tables/model_metrics.csv`
+- `outputs/tables/ablation_results.csv`
+- `outputs/tables/cluster_summary.csv`
+- `outputs/tables/silhouette_scores.csv`
+- `outputs/system_pipeline_diagram.png`
+- `outputs/confidence_distribution.png`
+- `outputs/case_study_examples.json`
 
-### Per-Journal Performance
+## How to Run
 
-For journals with at least `5` test samples, the project computes Top-5 hit rate per journal.
-
-Generated files:
-
-- [Per-journal Top-5 table](/C:/Users/toplu/Documents/Codex/2026-04-26/files-mentioned-by-the-user-compsciencepub/outputs/tables/per_journal_top5.csv)
-- [Best-performing journals](/C:/Users/toplu/Documents/Codex/2026-04-26/files-mentioned-by-the-user-compsciencepub/outputs/tables/best_performing_journals.csv)
-- [Worst-performing journals](/C:/Users/toplu/Documents/Codex/2026-04-26/files-mentioned-by-the-user-compsciencepub/outputs/tables/worst_performing_journals.csv)
-
-Interpretation:
-
-- Journals with more samples and clearer topical scope perform better.
-- Broad or interdisciplinary journals tend to produce more ambiguous recommendation boundaries.
-
-### Confusion Analysis
-
-Incorrect predictions are analyzed as true journal vs. rank-1 predicted journal pairs.
-
-Generated file:
-
-- [Top confused journal pairs](/C:/Users/toplu/Documents/Codex/2026-04-26/files-mentioned-by-the-user-compsciencepub/outputs/tables/top_confused_journal_pairs.csv)
-
-Interpretation:
-
-- Many confusions are caused by overlapping journal scope.
-- Interdisciplinary abstracts often share vocabulary with several candidate journals.
-
-### Class Imbalance Analysis
-
-The project analyzes article counts per journal and explicitly counts journals with fewer than `5`, `10`, and `20` articles.
-
-Generated files:
-
-- [Journal article counts](/C:/Users/toplu/Documents/Codex/2026-04-26/files-mentioned-by-the-user-compsciencepub/outputs/tables/journal_article_counts.csv)
-- [Class imbalance summary](/C:/Users/toplu/Documents/Codex/2026-04-26/files-mentioned-by-the-user-compsciencepub/outputs/tables/class_imbalance_summary.csv)
-- [Journal imbalance plot](/C:/Users/toplu/Documents/Codex/2026-04-26/files-mentioned-by-the-user-compsciencepub/outputs/figures/journal_imbalance.png)
-
-Interpretation:
-
-- Imbalance reduces recommendation quality for sparse journals.
-- Frequent journals provide stronger lexical patterns and better classifier calibration.
-
-### Final Model Selection
-
-The final deployable model is **TF-IDF** because:
-
-- it performs best on all metrics
-- journal recommendation is keyword-sensitive
-- domain-specific terminology matters
-- BERT is kept as a semantic comparison baseline
-
-## How to run
-
-Use the existing local Jupyter environment at `D:\jupyter_env\Scripts\python.exe`.
-
-Generate notebook:
+Generate the notebook:
 
 ```powershell
 & 'D:\jupyter_env\Scripts\python.exe' 'scripts\generate_notebook.py'
-```
-
-Build figures and tables:
-
-```powershell
-$env:LOKY_MAX_CPU_COUNT='8'
-& 'D:\jupyter_env\Scripts\python.exe' 'scripts\build_project_assets.py'
-```
-
-Execute the notebook in place:
-
-```powershell
-$env:LOKY_MAX_CPU_COUNT='8'
-$env:JUPYTER_ALLOW_INSECURE_WRITES='true'
-& 'D:\jupyter_env\Scripts\python.exe' -m jupyter nbconvert --to notebook --execute --inplace 'notebooks\data_mining_final_project.ipynb' --ExecutePreprocessor.timeout=1800
-```
-
-Run smoke tests:
-
-```powershell
-& 'D:\jupyter_env\Scripts\python.exe' -m unittest 'tests\test_project_lib.py'
-```
-
-Sentence-BERT model weights are cached under:
-
-```text
-outputs/cache/models
-```
-
-Article embedding caches are stored under:
-
-```text
-outputs/cache
-```
-
-## Important files
-
-- [Metrics table](/C:/Users/toplu/Documents/Codex/2026-04-26/files-mentioned-by-the-user-compsciencepub/outputs/tables/model_metrics.csv)
-- [Ablation results](/C:/Users/toplu/Documents/Codex/2026-04-26/files-mentioned-by-the-user-compsciencepub/outputs/tables/ablation_results.csv)
-- [Per-journal performance](/C:/Users/toplu/Documents/Codex/2026-04-26/files-mentioned-by-the-user-compsciencepub/outputs/tables/per_journal_top5.csv)
-- [Confused journal pairs](/C:/Users/toplu/Documents/Codex/2026-04-26/files-mentioned-by-the-user-compsciencepub/outputs/tables/top_confused_journal_pairs.csv)
-- [Class imbalance summary](/C:/Users/toplu/Documents/Codex/2026-04-26/files-mentioned-by-the-user-compsciencepub/outputs/tables/class_imbalance_summary.csv)
-- [Cluster summary](/C:/Users/toplu/Documents/Codex/2026-04-26/files-mentioned-by-the-user-compsciencepub/outputs/tables/cluster_summary.csv)
-- [Demo recommendations](/C:/Users/toplu/Documents/Codex/2026-04-26/files-mentioned-by-the-user-compsciencepub/outputs/tables/demo_recommendations.json)
-- [Model comparison figure](/C:/Users/toplu/Documents/Codex/2026-04-26/files-mentioned-by-the-user-compsciencepub/outputs/figures/abstract_model_comparison.png)
-- [Ablation comparison figure](/C:/Users/toplu/Documents/Codex/2026-04-26/files-mentioned-by-the-user-compsciencepub/outputs/figures/ablation_comparison.png)
-- [Journal imbalance figure](/C:/Users/toplu/Documents/Codex/2026-04-26/files-mentioned-by-the-user-compsciencepub/outputs/figures/journal_imbalance.png)
-- [Cluster projection figure](/C:/Users/toplu/Documents/Codex/2026-04-26/files-mentioned-by-the-user-compsciencepub/outputs/figures/cluster_projection.png)
-
-## Notes
-
-- The notebook and the report are written in English because the assignment expects an academic submission format.
-- Notebook execution on Windows required `JUPYTER_ALLOW_INSECURE_WRITES=true` because the local Jupyter runtime attempted to apply unsupported secure-write permissions.
-- The Sentence-BERT model used in this project is `all-MiniLM-L6-v2`.
