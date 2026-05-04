@@ -1,0 +1,1147 @@
+[
+  {
+    "record_id": 94293,
+    "title": "Substructural identification using neural networks",
+    "true_journal": "COMPUTERS & STRUCTURES",
+    "subjects": "Computer Science, Interdisciplinary Applications; Engineering, Civil; Computer Science; Engineering",
+    "cluster_label": "Artificial Intelligence",
+    "recommendations": {
+      "tfidf": [
+        {
+          "journal": "COMPUTERS & STRUCTURES",
+          "score": 0.0112,
+          "confidence_score": 0.0112,
+          "top_keywords": [
+            "FE model updating",
+            "damage assessment",
+            "damage functions",
+            "modal sensitivities",
+            "modal parameters"
+          ],
+          "evidence_titles": [
+            "Damage assessment by FE model updating using damage functions",
+            "Development of dynamic stiffness method for free vibration of functionally graded Timoshenko beams",
+            "Genetic algorithm in structural damage detection"
+          ],
+          "evidence_snippets": [
+            "A sensitivity-based finite element (FE) model updating method using experimental modal data is presented. Such a procedure aims to adjust the uncertain properties of the FE mode...",
+            "The free vibration of functionally graded Timoshenko beams is investigated by developing the dynamic stiffness method. Material properties of the beam are assumed to vary contin...",
+            "Detection of structural damage is an inverse problem in structural engineering. There are three main questions in the damage detection: the existence, location and extent of the..."
+          ],
+          "evidence_subjects": [
+            "Computer Science, Interdisciplinary Applications",
+            "Engineering, Civil",
+            "Computer Science"
+          ],
+          "cluster_label": "Engineering",
+          "explanation": "Recommended because similar articles contain keywords such as FE model updating, damage assessment, damage functions. Cluster: Engineering."
+        },
+        {
+          "journal": "ADVANCES IN ENGINEERING SOFTWARE",
+          "score": 0.0078,
+          "confidence_score": 0.0078,
+          "top_keywords": [
+            "Damage identification",
+            "Improved charged system search",
+            "Truss structures",
+            "Frequencies",
+            "Mode shapes"
+          ],
+          "evidence_titles": [
+            "An improved CSS for damage detection of truss structures using changes in natural frequencies and mode shapes",
+            "Formulation of the Audze-Eglais Uniform Latin Hypercube design of experiments"
+          ],
+          "evidence_snippets": [
+            "Non-destructive structural damage identification can be carried out using the difference between a structure's characteristics before and after a catastrophic event. An approach...",
+            "This paper describes a method for formulating the Audze-Eglais Uniform Latin Hypercube design of experiments (DoE). The formulation of the Audze-Eglais DoE has not been reported..."
+          ],
+          "evidence_subjects": [
+            "Computer Science, Interdisciplinary Applications",
+            "Computer Science, Software Engineering",
+            "Engineering, Multidisciplinary"
+          ],
+          "cluster_label": "Artificial Intelligence",
+          "explanation": "Recommended because similar articles contain keywords such as Damage identification, Improved charged system search, Truss structures. Cluster: Artificial Intelligence."
+        },
+        {
+          "journal": "COMPUTER METHODS IN APPLIED MECHANICS AND ENGINEERING",
+          "score": 0.0062,
+          "confidence_score": 0.0062,
+          "top_keywords": [
+            "Flexoelectricity",
+            "Piezoelectricity",
+            "Isogeometric analysis (IGA)",
+            "sensitivity analysis"
+          ],
+          "evidence_titles": [
+            "Sensitivity and uncertainty analysis for flexoelectric nanostructures"
+          ],
+          "evidence_snippets": [
+            "In this paper, sensitivity analysis has been applied to identify the key input parameters influencing the energy conversion factor (ECF) of flexoelectric materials. The governin..."
+          ],
+          "evidence_subjects": [
+            "Engineering, Multidisciplinary",
+            "Mathematics, Interdisciplinary Applications",
+            "Mechanics"
+          ],
+          "cluster_label": "Engineering",
+          "explanation": "Recommended because similar articles contain keywords such as Flexoelectricity, Piezoelectricity, Isogeometric analysis (IGA). Cluster: Engineering."
+        },
+        {
+          "journal": "NEUROCOMPUTING",
+          "score": 0.0061,
+          "confidence_score": 0.0061,
+          "top_keywords": [],
+          "evidence_titles": [],
+          "evidence_snippets": [],
+          "evidence_subjects": [],
+          "cluster_label": "Not available",
+          "explanation": "Recommended because similar articles contain keywords such as related journal terms. Cluster: Not available."
+        },
+        {
+          "journal": "NEURAL PROCESSING LETTERS",
+          "score": 0.0052,
+          "confidence_score": 0.0052,
+          "top_keywords": [],
+          "evidence_titles": [],
+          "evidence_snippets": [],
+          "evidence_subjects": [],
+          "cluster_label": "Not available",
+          "explanation": "Recommended because similar articles contain keywords such as related journal terms. Cluster: Not available."
+        }
+      ],
+      "bert": [
+        {
+          "journal": "COMPUTERS & STRUCTURES",
+          "score": 0.1687,
+          "confidence_score": 0.1687,
+          "top_keywords": [
+            "model updating",
+            "Structural identification",
+            "multi-objective optimization",
+            "Bayesian inference",
+            "Transitional MCMC"
+          ],
+          "evidence_titles": [
+            "Component mode synthesis techniques for finite element model updating",
+            "Damage assessment by FE model updating using damage functions",
+            "Genetic algorithm in structural damage detection"
+          ],
+          "evidence_snippets": [
+            "Deterministic and Bayesian finite element (FE) model updating techniques are computationally very demanding operations due to the large number of FE model re-analyses required....",
+            "A sensitivity-based finite element (FE) model updating method using experimental modal data is presented. Such a procedure aims to adjust the uncertain properties of the FE mode...",
+            "Detection of structural damage is an inverse problem in structural engineering. There are three main questions in the damage detection: the existence, location and extent of the..."
+          ],
+          "evidence_subjects": [
+            "Computer Science, Interdisciplinary Applications",
+            "Engineering, Civil",
+            "Computer Science"
+          ],
+          "cluster_label": "Engineering",
+          "explanation": "Recommended because similar articles contain keywords such as model updating, Structural identification, multi-objective optimization. Cluster: Engineering."
+        },
+        {
+          "journal": "ADVANCES IN ENGINEERING SOFTWARE",
+          "score": 0.1453,
+          "confidence_score": 0.1453,
+          "top_keywords": [
+            "neural networks",
+            "Damage identification",
+            "Improved charged system search",
+            "Truss structures",
+            "Frequencies"
+          ],
+          "evidence_titles": [
+            "An improved CSS for damage detection of truss structures using changes in natural frequencies and mode shapes",
+            "Structural reliability analysis using Monte Carlo simulation and neural networks",
+            "Optimum design of structures by an improved genetic algorithm using neural networks"
+          ],
+          "evidence_snippets": [
+            "Non-destructive structural damage identification can be carried out using the difference between a structure's characteristics before and after a catastrophic event. An approach...",
+            "This paper examines a methodology for computing the probability of structural failure by combining neural networks (NN) and Monte Carlo simulation (MCS). MCS is a powerful tool,...",
+            "Optimum design of large-scale structures by standard genetic algorithm (GA) makes the computational burden of the process very high. To reduce the computational cost of standard..."
+          ],
+          "evidence_subjects": [
+            "Computer Science, Interdisciplinary Applications",
+            "Computer Science, Software Engineering",
+            "Engineering, Multidisciplinary"
+          ],
+          "cluster_label": "Artificial Intelligence",
+          "explanation": "Recommended because similar articles contain keywords such as neural networks, Damage identification, Improved charged system search. Cluster: Artificial Intelligence."
+        },
+        {
+          "journal": "COMPUTERS AND CONCRETE",
+          "score": 0.1229,
+          "confidence_score": 0.1229,
+          "top_keywords": [
+            "Concrete",
+            "Density",
+            "Compressive strength",
+            "ultrasonic pulse velocity",
+            "non-destructive testing"
+          ],
+          "evidence_titles": [
+            "The use of neural networks in concrete compressive strength estimation",
+            "Experimental evaluation of crack effects on the dynamic characteristics of a prototype arch dam using ambient vibration tests",
+            "Predicting shear capacity of NSC and HSC slender beams without stirrups using artificial intelligence"
+          ],
+          "evidence_snippets": [
+            "Testing of ultrasonic pulse velocity (UPV) is one of the most popular and actual non-destructive techniques used in the estimation of the concrete properties in structures. In t...",
+            "The aim of the study is to determine the modal parameters of a prototype damaged arch dam by operational modal analysis (OMA) method for some damage scenarios. For this purpose,...",
+            "The use of high-strength concrete (HSC) has significantly increased over the last decade, especially in offshore structures, long-span bridges, and tall buildings. The behavior..."
+          ],
+          "evidence_subjects": [
+            "Computer Science, Interdisciplinary Applications",
+            "Construction & Building Technology",
+            "Engineering, Civil"
+          ],
+          "cluster_label": "Artificial Intelligence",
+          "explanation": "Recommended because similar articles contain keywords such as Concrete, Density, Compressive strength. Cluster: Artificial Intelligence."
+        },
+        {
+          "journal": "INTEGRATED COMPUTER-AIDED ENGINEERING",
+          "score": 0.0848,
+          "confidence_score": 0.0848,
+          "top_keywords": [],
+          "evidence_titles": [
+            "Recurrent neural networks for fuzzy data",
+            "A soft computing method for detecting lifetime building thermal insulation failures"
+          ],
+          "evidence_snippets": [
+            "In this paper, a model-free approach for data mining in engineering is presented. The numerical approach is based on artificial neural networks. Recurrent neural networks for fu...",
+            "The detection of thermal insulation failures in buildings in operation responds to the challenge of improving building energy efficiency. This multidisciplinary study presents a..."
+          ],
+          "evidence_subjects": [
+            "Computer Science, Artificial Intelligence",
+            "Computer Science, Interdisciplinary Applications",
+            "Engineering, Multidisciplinary"
+          ],
+          "cluster_label": "Artificial Intelligence",
+          "explanation": "Recommended because similar articles contain keywords such as related journal terms. Cluster: Artificial Intelligence."
+        },
+        {
+          "journal": "CMES-COMPUTER MODELING IN ENGINEERING & SCIENCES",
+          "score": 0.0838,
+          "confidence_score": 0.0838,
+          "top_keywords": [
+            "Beam and plate",
+            "interval wavelets",
+            "wavelet Finite element model",
+            "Hybrid approach",
+            "particle swarm optimization"
+          ],
+          "evidence_titles": [
+            "A Hybrid of Interval Wavelets and Wavelet Finite Element Model for Damage Detection in Structures"
+          ],
+          "evidence_snippets": [
+            "Damages occurred in a structure will lead to changes in modal parameters (natural frequencies and modal shapes). The relationship between modal parameters and damage parameters..."
+          ],
+          "evidence_subjects": [
+            "Engineering, Multidisciplinary",
+            "Mathematics, Interdisciplinary Applications",
+            "Engineering"
+          ],
+          "cluster_label": "Engineering",
+          "explanation": "Recommended because similar articles contain keywords such as Beam and plate, interval wavelets, wavelet Finite element model. Cluster: Engineering."
+        }
+      ],
+      "ensemble": [
+        {
+          "journal": "COMPUTERS & STRUCTURES",
+          "score": 0.0899,
+          "confidence_score": 0.0899,
+          "tfidf_score": 0.0112,
+          "bert_score": 0.1687,
+          "top_keywords": [
+            "model updating",
+            "Structural identification",
+            "multi-objective optimization",
+            "Bayesian inference",
+            "Transitional MCMC"
+          ],
+          "evidence_titles": [
+            "Component mode synthesis techniques for finite element model updating",
+            "Damage assessment by FE model updating using damage functions",
+            "Genetic algorithm in structural damage detection"
+          ],
+          "evidence_snippets": [
+            "Deterministic and Bayesian finite element (FE) model updating techniques are computationally very demanding operations due to the large number of FE model re-analyses required....",
+            "A sensitivity-based finite element (FE) model updating method using experimental modal data is presented. Such a procedure aims to adjust the uncertain properties of the FE mode...",
+            "Detection of structural damage is an inverse problem in structural engineering. There are three main questions in the damage detection: the existence, location and extent of the..."
+          ],
+          "evidence_subjects": [
+            "Computer Science, Interdisciplinary Applications",
+            "Engineering, Civil",
+            "Computer Science"
+          ],
+          "cluster_label": "Engineering",
+          "explanation": "Recommended because similar articles contain keywords such as model updating, Structural identification, multi-objective optimization. Cluster: Engineering."
+        },
+        {
+          "journal": "ADVANCES IN ENGINEERING SOFTWARE",
+          "score": 0.0765,
+          "confidence_score": 0.0765,
+          "tfidf_score": 0.0078,
+          "bert_score": 0.1453,
+          "top_keywords": [
+            "neural networks",
+            "Damage identification",
+            "Improved charged system search",
+            "Truss structures",
+            "Frequencies"
+          ],
+          "evidence_titles": [
+            "An improved CSS for damage detection of truss structures using changes in natural frequencies and mode shapes",
+            "Structural reliability analysis using Monte Carlo simulation and neural networks",
+            "Optimum design of structures by an improved genetic algorithm using neural networks"
+          ],
+          "evidence_snippets": [
+            "Non-destructive structural damage identification can be carried out using the difference between a structure's characteristics before and after a catastrophic event. An approach...",
+            "This paper examines a methodology for computing the probability of structural failure by combining neural networks (NN) and Monte Carlo simulation (MCS). MCS is a powerful tool,...",
+            "Optimum design of large-scale structures by standard genetic algorithm (GA) makes the computational burden of the process very high. To reduce the computational cost of standard..."
+          ],
+          "evidence_subjects": [
+            "Computer Science, Interdisciplinary Applications",
+            "Computer Science, Software Engineering",
+            "Engineering, Multidisciplinary"
+          ],
+          "cluster_label": "Artificial Intelligence",
+          "explanation": "Recommended because similar articles contain keywords such as neural networks, Damage identification, Improved charged system search. Cluster: Artificial Intelligence."
+        },
+        {
+          "journal": "COMPUTERS AND CONCRETE",
+          "score": 0.063,
+          "confidence_score": 0.063,
+          "tfidf_score": 0.0031,
+          "bert_score": 0.1229,
+          "top_keywords": [
+            "Concrete",
+            "Density",
+            "Compressive strength",
+            "ultrasonic pulse velocity",
+            "non-destructive testing"
+          ],
+          "evidence_titles": [
+            "The use of neural networks in concrete compressive strength estimation",
+            "Experimental evaluation of crack effects on the dynamic characteristics of a prototype arch dam using ambient vibration tests",
+            "Predicting shear capacity of NSC and HSC slender beams without stirrups using artificial intelligence"
+          ],
+          "evidence_snippets": [
+            "Testing of ultrasonic pulse velocity (UPV) is one of the most popular and actual non-destructive techniques used in the estimation of the concrete properties in structures. In t...",
+            "The aim of the study is to determine the modal parameters of a prototype damaged arch dam by operational modal analysis (OMA) method for some damage scenarios. For this purpose,...",
+            "The use of high-strength concrete (HSC) has significantly increased over the last decade, especially in offshore structures, long-span bridges, and tall buildings. The behavior..."
+          ],
+          "evidence_subjects": [
+            "Computer Science, Interdisciplinary Applications",
+            "Construction & Building Technology",
+            "Engineering, Civil"
+          ],
+          "cluster_label": "Artificial Intelligence",
+          "explanation": "Recommended because similar articles contain keywords such as Concrete, Density, Compressive strength. Cluster: Artificial Intelligence."
+        },
+        {
+          "journal": "INTEGRATED COMPUTER-AIDED ENGINEERING",
+          "score": 0.0444,
+          "confidence_score": 0.0444,
+          "tfidf_score": 0.0041,
+          "bert_score": 0.0848,
+          "top_keywords": [],
+          "evidence_titles": [
+            "Recurrent neural networks for fuzzy data",
+            "A soft computing method for detecting lifetime building thermal insulation failures"
+          ],
+          "evidence_snippets": [
+            "In this paper, a model-free approach for data mining in engineering is presented. The numerical approach is based on artificial neural networks. Recurrent neural networks for fu...",
+            "The detection of thermal insulation failures in buildings in operation responds to the challenge of improving building energy efficiency. This multidisciplinary study presents a..."
+          ],
+          "evidence_subjects": [
+            "Computer Science, Artificial Intelligence",
+            "Computer Science, Interdisciplinary Applications",
+            "Engineering, Multidisciplinary"
+          ],
+          "cluster_label": "Artificial Intelligence",
+          "explanation": "Recommended because similar articles contain keywords such as related journal terms. Cluster: Artificial Intelligence."
+        },
+        {
+          "journal": "CMES-COMPUTER MODELING IN ENGINEERING & SCIENCES",
+          "score": 0.0437,
+          "confidence_score": 0.0437,
+          "tfidf_score": 0.0037,
+          "bert_score": 0.0838,
+          "top_keywords": [
+            "Beam and plate",
+            "interval wavelets",
+            "wavelet Finite element model",
+            "Hybrid approach",
+            "particle swarm optimization"
+          ],
+          "evidence_titles": [
+            "A Hybrid of Interval Wavelets and Wavelet Finite Element Model for Damage Detection in Structures"
+          ],
+          "evidence_snippets": [
+            "Damages occurred in a structure will lead to changes in modal parameters (natural frequencies and modal shapes). The relationship between modal parameters and damage parameters..."
+          ],
+          "evidence_subjects": [
+            "Engineering, Multidisciplinary",
+            "Mathematics, Interdisciplinary Applications",
+            "Engineering"
+          ],
+          "cluster_label": "Engineering",
+          "explanation": "Recommended because similar articles contain keywords such as Beam and plate, interval wavelets, wavelet Finite element model. Cluster: Engineering."
+        }
+      ]
+    }
+  },
+  {
+    "record_id": 92267,
+    "title": "On surface normal and Gaussian curvature approximations given data sampled from a smooth surface",
+    "true_journal": "COMPUTER AIDED GEOMETRIC DESIGN",
+    "subjects": "Computer Science, Software Engineering; Mathematics, Applied; Computer Science; Mathematics",
+    "cluster_label": "Software Engineering",
+    "recommendations": {
+      "tfidf": [
+        {
+          "journal": "COMPUTER AIDED GEOMETRIC DESIGN",
+          "score": 0.014,
+          "confidence_score": 0.014,
+          "top_keywords": [
+            "Curvature",
+            "5-axis CNC machining",
+            "Ball-end cutter",
+            "Tool orientation",
+            "Parallel transport"
+          ],
+          "evidence_titles": [
+            "Optimal tool orientation control for 5-axis CNC milling with ball-end cutters",
+            "Curvature formulas for implicit curves and surfaces",
+            "Curvature based sampling of curves and surfaces"
+          ],
+          "evidence_snippets": [
+            "When a ball-end milling tool cuts a given path on a smooth surface, it is desirable to maintain a fixed angle between the tool axis a and the local surface normal n at each poin...",
+            "Curvature formulas for implicit curves and surfaces are derived from the classical curvature formulas in Differential Geometry for parametric curves and surfaces. These closed f...",
+            "Efficient sampling methods enable the reconstruction of a generic surface with a limited amount of points. The reconstructed surface can therefore be used for inspection purpose..."
+          ],
+          "evidence_subjects": [
+            "Computer Science, Software Engineering",
+            "Mathematics, Applied",
+            "Computer Science"
+          ],
+          "cluster_label": "Software Engineering",
+          "explanation": "Recommended because similar articles contain keywords such as Curvature, 5-axis CNC machining, Ball-end cutter. Cluster: Software Engineering."
+        },
+        {
+          "journal": "GRAPHICAL MODELS",
+          "score": 0.0063,
+          "confidence_score": 0.0063,
+          "top_keywords": [
+            "curvature estimation",
+            "normal vector estimation",
+            "crease detection",
+            "dense triangle meshes",
+            "piecewise-smooth surfaces"
+          ],
+          "evidence_titles": [
+            "Normal vector voting: Crease detection and curvature estimation on large, noisy meshes",
+            "Contour-based surface reconstruction using MPU implicit models",
+            "Provably good sampling and meshing of surfaces"
+          ],
+          "evidence_snippets": [
+            "This paper describes a robust method for crease detection and curvature estimation on large, noisy triangle meshes. We assume that these meshes are approximations of piecewise-s...",
+            "This paper presents a technique for creating a smooth, closed surface from a set of 2D contours, which have been extracted from a 3D scan. The technique interprets the pixels th...",
+            "The notion of epsilon-sample, introduced by Amenta and Bern, has proven to be a key concept in the theory of sampled surfaces. Of particular interest is the fact that, if E is a..."
+          ],
+          "evidence_subjects": [
+            "Computer Science, Software Engineering",
+            "Computer Science"
+          ],
+          "cluster_label": "Software Engineering",
+          "explanation": "Recommended because similar articles contain keywords such as curvature estimation, normal vector estimation, crease detection. Cluster: Software Engineering."
+        },
+        {
+          "journal": "NEUROCOMPUTING",
+          "score": 0.0061,
+          "confidence_score": 0.0061,
+          "top_keywords": [],
+          "evidence_titles": [],
+          "evidence_snippets": [],
+          "evidence_subjects": [],
+          "cluster_label": "Not available",
+          "explanation": "Recommended because similar articles contain keywords such as related journal terms. Cluster: Not available."
+        },
+        {
+          "journal": "DISPLAYS",
+          "score": 0.0061,
+          "confidence_score": 0.0061,
+          "top_keywords": [],
+          "evidence_titles": [],
+          "evidence_snippets": [],
+          "evidence_subjects": [],
+          "cluster_label": "Not available",
+          "explanation": "Recommended because similar articles contain keywords such as related journal terms. Cluster: Not available."
+        },
+        {
+          "journal": "COMPUTERS IN BIOLOGY AND MEDICINE",
+          "score": 0.006,
+          "confidence_score": 0.006,
+          "top_keywords": [],
+          "evidence_titles": [],
+          "evidence_snippets": [],
+          "evidence_subjects": [],
+          "cluster_label": "Not available",
+          "explanation": "Recommended because similar articles contain keywords such as related journal terms. Cluster: Not available."
+        }
+      ],
+      "bert": [
+        {
+          "journal": "COMPUTER AIDED GEOMETRIC DESIGN",
+          "score": 0.2394,
+          "confidence_score": 0.2394,
+          "top_keywords": [
+            "Curvature",
+            "sampling",
+            "NURBS",
+            "Torsion",
+            "Gaussian curvature"
+          ],
+          "evidence_titles": [
+            "Curvature based sampling of curves and surfaces",
+            "Curvature formulas for implicit curves and surfaces",
+            "Discrete surface modelling using partial differential equations"
+          ],
+          "evidence_snippets": [
+            "Efficient sampling methods enable the reconstruction of a generic surface with a limited amount of points. The reconstructed surface can therefore be used for inspection purpose...",
+            "Curvature formulas for implicit curves and surfaces are derived from the classical curvature formulas in Differential Geometry for parametric curves and surfaces. These closed f...",
+            "We use various nonlinear partial differential equations to efficiently solve several surface modelling problems, including surface blending, N-sided hole filling and free-form s..."
+          ],
+          "evidence_subjects": [
+            "Computer Science, Software Engineering",
+            "Mathematics, Applied",
+            "Computer Science"
+          ],
+          "cluster_label": "Software Engineering",
+          "explanation": "Recommended because similar articles contain keywords such as Curvature, sampling, NURBS. Cluster: Software Engineering."
+        },
+        {
+          "journal": "GRAPHICAL MODELS",
+          "score": 0.1923,
+          "confidence_score": 0.1923,
+          "top_keywords": [
+            "curvature estimation",
+            "normal vector estimation",
+            "crease detection",
+            "dense triangle meshes",
+            "piecewise-smooth surfaces"
+          ],
+          "evidence_titles": [
+            "Normal vector voting: Crease detection and curvature estimation on large, noisy meshes",
+            "Projection of curves on B-spline surfaces using quadratic reparameterization",
+            "Provably good sampling and meshing of surfaces"
+          ],
+          "evidence_snippets": [
+            "This paper describes a robust method for crease detection and curvature estimation on large, noisy triangle meshes. We assume that these meshes are approximations of piecewise-s...",
+            "Curves on surfaces play an important role in computer aided geometric design In this paper we present a hyperbola approximation method based on the quadratic reparameterization...",
+            "The notion of epsilon-sample, introduced by Amenta and Bern, has proven to be a key concept in the theory of sampled surfaces. Of particular interest is the fact that, if E is a..."
+          ],
+          "evidence_subjects": [
+            "Computer Science, Software Engineering",
+            "Computer Science"
+          ],
+          "cluster_label": "Software Engineering",
+          "explanation": "Recommended because similar articles contain keywords such as curvature estimation, normal vector estimation, crease detection. Cluster: Software Engineering."
+        },
+        {
+          "journal": "COMPUTERS & GRAPHICS-UK",
+          "score": 0.1232,
+          "confidence_score": 0.1232,
+          "top_keywords": [
+            "differential geometry",
+            "curvature estimation",
+            "Least-squares",
+            "geometry compression and predictors",
+            "Normal estimation"
+          ],
+          "evidence_titles": [
+            "Curvature and torsion estimators based on parametric curve fitting",
+            "Robust normal estimation for point clouds with sharp features",
+            "A fast roughness-based approach to the assessment of 3D mesh visual quality"
+          ],
+          "evidence_snippets": [
+            "Many applications of geometry processing and computer vision rely on geometric properties of curves, particularly, their curvature. Several methods have already been proposed to...",
+            "This paper presents a novel technique for estimating normals on unorganized point clouds. Methods from robust statistics are used to detect the best local tangent plane for each...",
+            "We propose in this paper a new objective metric for the visual quality assessment of 3D meshes. The metric can predict the extent of the visual difference between a reference me..."
+          ],
+          "evidence_subjects": [
+            "Computer Science, Software Engineering",
+            "Computer Science"
+          ],
+          "cluster_label": "Software Engineering",
+          "explanation": "Recommended because similar articles contain keywords such as differential geometry, curvature estimation, Least-squares. Cluster: Software Engineering."
+        },
+        {
+          "journal": "VISUAL COMPUTER",
+          "score": 0.1062,
+          "confidence_score": 0.1062,
+          "top_keywords": [
+            "vertex normals",
+            "modeling",
+            "rendering meshes",
+            "G(n) continuity",
+            "G(n) blending"
+          ],
+          "evidence_titles": [
+            "A comparison of algorithms for vertex normal computation",
+            "Parametric G(n) blending of curves and surfaces"
+          ],
+          "evidence_snippets": [
+            "We investigate current vertex normal computation algorithms and evaluate their effectiveness at approximating analytically computable (and thus comparable) normals for a variety...",
+            "We introduce a simple blending method for parametric curves and surfaces that produces families of parametrically defined, Gn-continuous blending curves and surfaces. The method..."
+          ],
+          "evidence_subjects": [
+            "Computer Science, Software Engineering",
+            "Computer Science"
+          ],
+          "cluster_label": "Theory & Methods",
+          "explanation": "Recommended because similar articles contain keywords such as vertex normals, modeling, rendering meshes. Cluster: Theory & Methods."
+        },
+        {
+          "journal": "COMPUTER GRAPHICS FORUM",
+          "score": 0.0957,
+          "confidence_score": 0.0957,
+          "top_keywords": [],
+          "evidence_titles": [
+            "Detection of salient curvature features on polygonal surfaces",
+            "Intrinsic parameterizations of surface meshes"
+          ],
+          "evidence_snippets": [
+            "We develop an approach for stable detection of perceptually salient curvature features on surfaces approximated by dense triangle meshes. The approach explores an \"area degenera...",
+            "Parameterization of discrete surfaces is a fundamental and widely-used operation in graphics, required, for instance, for texture mapping or remeshing. As 3D data becomes more a..."
+          ],
+          "evidence_subjects": [
+            "Computer Science, Software Engineering",
+            "Computer Science"
+          ],
+          "cluster_label": "Software Engineering",
+          "explanation": "Recommended because similar articles contain keywords such as related journal terms. Cluster: Software Engineering."
+        }
+      ],
+      "ensemble": [
+        {
+          "journal": "COMPUTER AIDED GEOMETRIC DESIGN",
+          "score": 0.1267,
+          "confidence_score": 0.1267,
+          "tfidf_score": 0.014,
+          "bert_score": 0.2394,
+          "top_keywords": [
+            "Curvature",
+            "sampling",
+            "NURBS",
+            "Torsion",
+            "Gaussian curvature"
+          ],
+          "evidence_titles": [
+            "Curvature based sampling of curves and surfaces",
+            "Curvature formulas for implicit curves and surfaces",
+            "Discrete surface modelling using partial differential equations"
+          ],
+          "evidence_snippets": [
+            "Efficient sampling methods enable the reconstruction of a generic surface with a limited amount of points. The reconstructed surface can therefore be used for inspection purpose...",
+            "Curvature formulas for implicit curves and surfaces are derived from the classical curvature formulas in Differential Geometry for parametric curves and surfaces. These closed f...",
+            "We use various nonlinear partial differential equations to efficiently solve several surface modelling problems, including surface blending, N-sided hole filling and free-form s..."
+          ],
+          "evidence_subjects": [
+            "Computer Science, Software Engineering",
+            "Mathematics, Applied",
+            "Computer Science"
+          ],
+          "cluster_label": "Software Engineering",
+          "explanation": "Recommended because similar articles contain keywords such as Curvature, sampling, NURBS. Cluster: Software Engineering."
+        },
+        {
+          "journal": "GRAPHICAL MODELS",
+          "score": 0.0993,
+          "confidence_score": 0.0993,
+          "tfidf_score": 0.0063,
+          "bert_score": 0.1923,
+          "top_keywords": [
+            "curvature estimation",
+            "normal vector estimation",
+            "crease detection",
+            "dense triangle meshes",
+            "piecewise-smooth surfaces"
+          ],
+          "evidence_titles": [
+            "Normal vector voting: Crease detection and curvature estimation on large, noisy meshes",
+            "Projection of curves on B-spline surfaces using quadratic reparameterization",
+            "Provably good sampling and meshing of surfaces"
+          ],
+          "evidence_snippets": [
+            "This paper describes a robust method for crease detection and curvature estimation on large, noisy triangle meshes. We assume that these meshes are approximations of piecewise-s...",
+            "Curves on surfaces play an important role in computer aided geometric design In this paper we present a hyperbola approximation method based on the quadratic reparameterization...",
+            "The notion of epsilon-sample, introduced by Amenta and Bern, has proven to be a key concept in the theory of sampled surfaces. Of particular interest is the fact that, if E is a..."
+          ],
+          "evidence_subjects": [
+            "Computer Science, Software Engineering",
+            "Computer Science"
+          ],
+          "cluster_label": "Software Engineering",
+          "explanation": "Recommended because similar articles contain keywords such as curvature estimation, normal vector estimation, crease detection. Cluster: Software Engineering."
+        },
+        {
+          "journal": "COMPUTERS & GRAPHICS-UK",
+          "score": 0.0644,
+          "confidence_score": 0.0644,
+          "tfidf_score": 0.0056,
+          "bert_score": 0.1232,
+          "top_keywords": [
+            "differential geometry",
+            "curvature estimation",
+            "Least-squares",
+            "geometry compression and predictors",
+            "Normal estimation"
+          ],
+          "evidence_titles": [
+            "Curvature and torsion estimators based on parametric curve fitting",
+            "Robust normal estimation for point clouds with sharp features",
+            "A fast roughness-based approach to the assessment of 3D mesh visual quality"
+          ],
+          "evidence_snippets": [
+            "Many applications of geometry processing and computer vision rely on geometric properties of curves, particularly, their curvature. Several methods have already been proposed to...",
+            "This paper presents a novel technique for estimating normals on unorganized point clouds. Methods from robust statistics are used to detect the best local tangent plane for each...",
+            "We propose in this paper a new objective metric for the visual quality assessment of 3D meshes. The metric can predict the extent of the visual difference between a reference me..."
+          ],
+          "evidence_subjects": [
+            "Computer Science, Software Engineering",
+            "Computer Science"
+          ],
+          "cluster_label": "Software Engineering",
+          "explanation": "Recommended because similar articles contain keywords such as differential geometry, curvature estimation, Least-squares. Cluster: Software Engineering."
+        },
+        {
+          "journal": "VISUAL COMPUTER",
+          "score": 0.0535,
+          "confidence_score": 0.0535,
+          "tfidf_score": 0.0008,
+          "bert_score": 0.1062,
+          "top_keywords": [
+            "vertex normals",
+            "modeling",
+            "rendering meshes",
+            "G(n) continuity",
+            "G(n) blending"
+          ],
+          "evidence_titles": [
+            "A comparison of algorithms for vertex normal computation",
+            "Parametric G(n) blending of curves and surfaces"
+          ],
+          "evidence_snippets": [
+            "We investigate current vertex normal computation algorithms and evaluate their effectiveness at approximating analytically computable (and thus comparable) normals for a variety...",
+            "We introduce a simple blending method for parametric curves and surfaces that produces families of parametrically defined, Gn-continuous blending curves and surfaces. The method..."
+          ],
+          "evidence_subjects": [
+            "Computer Science, Software Engineering",
+            "Computer Science"
+          ],
+          "cluster_label": "Theory & Methods",
+          "explanation": "Recommended because similar articles contain keywords such as vertex normals, modeling, rendering meshes. Cluster: Theory & Methods."
+        },
+        {
+          "journal": "COMPUTER GRAPHICS FORUM",
+          "score": 0.0501,
+          "confidence_score": 0.0501,
+          "tfidf_score": 0.0044,
+          "bert_score": 0.0957,
+          "top_keywords": [],
+          "evidence_titles": [
+            "Detection of salient curvature features on polygonal surfaces",
+            "Intrinsic parameterizations of surface meshes"
+          ],
+          "evidence_snippets": [
+            "We develop an approach for stable detection of perceptually salient curvature features on surfaces approximated by dense triangle meshes. The approach explores an \"area degenera...",
+            "Parameterization of discrete surfaces is a fundamental and widely-used operation in graphics, required, for instance, for texture mapping or remeshing. As 3D data becomes more a..."
+          ],
+          "evidence_subjects": [
+            "Computer Science, Software Engineering",
+            "Computer Science"
+          ],
+          "cluster_label": "Software Engineering",
+          "explanation": "Recommended because similar articles contain keywords such as related journal terms. Cluster: Software Engineering."
+        }
+      ]
+    }
+  },
+  {
+    "record_id": 97062,
+    "title": "Analyzing human-computer interaction as distributed cognition: The resources model",
+    "true_journal": "HUMAN-COMPUTER INTERACTION",
+    "subjects": "Computer Science, Cybernetics; Computer Science, Theory & Methods; Computer Science",
+    "cluster_label": "Information Systems",
+    "recommendations": {
+      "tfidf": [
+        {
+          "journal": "HUMAN-COMPUTER INTERACTION",
+          "score": 0.0064,
+          "confidence_score": 0.0064,
+          "top_keywords": [],
+          "evidence_titles": [
+            "Comparison of four primary methods for coordinating the interruption of people in human-computer interaction",
+            "The Human-Artifact Model: An Activity Theoretical Approach to Artifact Ecologies",
+            "The Usability Construct: A Dead End?"
+          ],
+          "evidence_snippets": [
+            "Interruptions can cause people to make mistakes or errors during human-computer interaction (HCI). Interruptions occur as an unavoidable side-effect of some important kinds of h...",
+            "Although devices of all shapes and sizes currently dominate the technological landscape, human-computer interaction (HCI) as a field is not yet theoretically equipped to match t...",
+            "\"Usability\" is a construct conceived by the human-computer interaction (HCI) community to denote a desired quality of interactive systems and products. Despite its prominence an..."
+          ],
+          "evidence_subjects": [
+            "Computer Science, Cybernetics",
+            "Computer Science, Theory & Methods",
+            "Computer Science"
+          ],
+          "cluster_label": "Information Systems",
+          "explanation": "Recommended because similar articles contain keywords such as related journal terms. Cluster: Information Systems."
+        },
+        {
+          "journal": "ACM TRANSACTIONS ON COMPUTER-HUMAN INTERACTION",
+          "score": 0.0059,
+          "confidence_score": 0.0059,
+          "top_keywords": [
+            "design",
+            "human factors",
+            "Ageing",
+            "older people",
+            "social gerontology"
+          ],
+          "evidence_titles": [
+            "An Age-Old Problem: Examining the Discourses of Ageing in HCI and Strategies for Future Research",
+            "Self-Care Technologies in HCI: Trends, Tensions, and Opportunities",
+            "Embodied Cognition and the Magical Future of Interaction Design"
+          ],
+          "evidence_snippets": [
+            "Ageing has become a significant area of interest in Human-Computer Interaction (HCI) in recent years. In this article we provide a critical analysis of 30 years of ageing resear...",
+            "Many studies show that self-care technologies can support patients with chronic conditions and their carers in understanding the ill body and increasing control of their conditi...",
+            "The theory of embodied cognition can provide HCI practitioners and theorists with new ideas about interaction and new principles for better designs. I support this claim with fo..."
+          ],
+          "evidence_subjects": [
+            "Computer Science, Cybernetics",
+            "Computer Science, Information Systems",
+            "Computer Science"
+          ],
+          "cluster_label": "Information Systems",
+          "explanation": "Recommended because similar articles contain keywords such as design, human factors, Ageing. Cluster: Information Systems."
+        },
+        {
+          "journal": "ACM TRANSACTIONS ON AUTONOMOUS AND ADAPTIVE SYSTEMS",
+          "score": 0.0049,
+          "confidence_score": 0.0049,
+          "top_keywords": [],
+          "evidence_titles": [],
+          "evidence_snippets": [],
+          "evidence_subjects": [],
+          "cluster_label": "Not available",
+          "explanation": "Recommended because similar articles contain keywords such as related journal terms. Cluster: Not available."
+        },
+        {
+          "journal": "INTERACTING WITH COMPUTERS",
+          "score": 0.0045,
+          "confidence_score": 0.0045,
+          "top_keywords": [
+            "Gamification",
+            "behavior change",
+            "Reflexivity",
+            "ethnography"
+          ],
+          "evidence_titles": [
+            "Drawing Inspiration from World of Warcraft: Gamification Design Elements for Behavior Change Technologies"
+          ],
+          "evidence_snippets": [
+            "Human-computer interaction (HCI) researchers are increasingly designing technologies for behavior change, drawing on different perspectives, theories and models. In recent years..."
+          ],
+          "evidence_subjects": [
+            "Computer Science, Cybernetics",
+            "Ergonomics",
+            "Computer Science"
+          ],
+          "cluster_label": "Information Systems",
+          "explanation": "Recommended because similar articles contain keywords such as Gamification, behavior change, Reflexivity. Cluster: Information Systems."
+        },
+        {
+          "journal": "ACM TRANSACTIONS ON SOFTWARE ENGINEERING AND METHODOLOGY",
+          "score": 0.0044,
+          "confidence_score": 0.0044,
+          "top_keywords": [],
+          "evidence_titles": [],
+          "evidence_snippets": [],
+          "evidence_subjects": [],
+          "cluster_label": "Not available",
+          "explanation": "Recommended because similar articles contain keywords such as related journal terms. Cluster: Not available."
+        }
+      ],
+      "bert": [
+        {
+          "journal": "HUMAN-COMPUTER INTERACTION",
+          "score": 0.1283,
+          "confidence_score": 0.1283,
+          "top_keywords": [],
+          "evidence_titles": [
+            "The Meaning of InteractivitySome Proposals for Definitions and Measures",
+            "Comparison of four primary methods for coordinating the interruption of people in human-computer interaction",
+            "The Human-Artifact Model: An Activity Theoretical Approach to Artifact Ecologies"
+          ],
+          "evidence_snippets": [
+            "New interactive applications, artifacts, and systems are constantly being added to our environments, and there are some concerns in the human-computer interaction research commu...",
+            "Interruptions can cause people to make mistakes or errors during human-computer interaction (HCI). Interruptions occur as an unavoidable side-effect of some important kinds of h...",
+            "Although devices of all shapes and sizes currently dominate the technological landscape, human-computer interaction (HCI) as a field is not yet theoretically equipped to match t..."
+          ],
+          "evidence_subjects": [
+            "Computer Science, Cybernetics",
+            "Computer Science, Theory & Methods",
+            "Computer Science"
+          ],
+          "cluster_label": "Information Systems",
+          "explanation": "Recommended because similar articles contain keywords such as related journal terms. Cluster: Information Systems."
+        },
+        {
+          "journal": "USER MODELING AND USER-ADAPTED INTERACTION",
+          "score": 0.0898,
+          "confidence_score": 0.0898,
+          "top_keywords": [
+            "user modeling",
+            "Human computer interaction",
+            "collaborative human-computer systems",
+            "high functionality applications",
+            "adaptive and adaptable systems"
+          ],
+          "evidence_titles": [
+            "User modeling in human-computer interaction",
+            "Personalization and context management"
+          ],
+          "evidence_snippets": [
+            "A fundamental objective of human-computer interaction research is to make systems more usable, more useful, and to provide users with experiences fitting their specific backgrou...",
+            "Supporting the individual user in his working, learning, or information access is one of the main goals of user modeling. Personal or group user models make it possible to repre..."
+          ],
+          "evidence_subjects": [
+            "Computer Science, Cybernetics",
+            "Computer Science"
+          ],
+          "cluster_label": "Information Systems",
+          "explanation": "Recommended because similar articles contain keywords such as user modeling, Human computer interaction, collaborative human-computer systems. Cluster: Information Systems."
+        },
+        {
+          "journal": "INFORMATION VISUALIZATION",
+          "score": 0.0897,
+          "confidence_score": 0.0897,
+          "top_keywords": [
+            "visual analytics",
+            "interaction theory",
+            "reasoning",
+            "Collaboration"
+          ],
+          "evidence_titles": [
+            "The science of interaction"
+          ],
+          "evidence_snippets": [
+            "There is a growing recognition within the visual analytics community that interaction and inquiry are inextricable. It is through the interactive manipulation of a visual interf..."
+          ],
+          "evidence_subjects": [
+            "Computer Science, Software Engineering",
+            "Computer Science"
+          ],
+          "cluster_label": "Information Systems",
+          "explanation": "Recommended because similar articles contain keywords such as visual analytics, interaction theory, reasoning. Cluster: Information Systems."
+        },
+        {
+          "journal": "NEURAL NETWORKS",
+          "score": 0.0818,
+          "confidence_score": 0.0818,
+          "top_keywords": [
+            "Joint action",
+            "Coordination",
+            "prediction",
+            "monitoring",
+            "Task representation"
+          ],
+          "evidence_titles": [
+            "A minimal architecture for joint action"
+          ],
+          "evidence_snippets": [
+            "What kinds of processes and representations make joint action possible? In this paper, we suggest a minimal architecture for joint action that focuses on representations, action..."
+          ],
+          "evidence_subjects": [
+            "Computer Science, Artificial Intelligence",
+            "Neurosciences",
+            "Computer Science"
+          ],
+          "cluster_label": "Artificial Intelligence",
+          "explanation": "Recommended because similar articles contain keywords such as Joint action, Coordination, prediction. Cluster: Artificial Intelligence."
+        },
+        {
+          "journal": "ACM TRANSACTIONS ON COMPUTER-HUMAN INTERACTION",
+          "score": 0.0815,
+          "confidence_score": 0.0815,
+          "top_keywords": [
+            "human-computer interaction",
+            "embodied cognition",
+            "distributed cognition",
+            "situated cognition",
+            "interaction design"
+          ],
+          "evidence_titles": [
+            "Embodied Cognition and the Magical Future of Interaction Design",
+            "Mechanisms for Collaboration: A Design and Evaluation Framework for Multi-User Interfaces",
+            "Strong Concepts: Intermediate-Level Knowledge in Interaction Design Research"
+          ],
+          "evidence_snippets": [
+            "The theory of embodied cognition can provide HCI practitioners and theorists with new ideas about interaction and new principles for better designs. I support this claim with fo...",
+            "Multi-user interfaces are said to provide \"natural\" interaction in supporting collaboration, compared to individual and noncolocated technologies. We identify three mechanisms a...",
+            "Design-oriented research practices create opportunities for constructing knowledge that is more abstracted than particular instances, without aspiring to be at the scope of gene..."
+          ],
+          "evidence_subjects": [
+            "Computer Science, Cybernetics",
+            "Computer Science, Information Systems",
+            "Computer Science"
+          ],
+          "cluster_label": "Information Systems",
+          "explanation": "Recommended because similar articles contain keywords such as human-computer interaction, embodied cognition, distributed cognition. Cluster: Information Systems."
+        }
+      ],
+      "ensemble": [
+        {
+          "journal": "HUMAN-COMPUTER INTERACTION",
+          "score": 0.0673,
+          "confidence_score": 0.0673,
+          "tfidf_score": 0.0064,
+          "bert_score": 0.1283,
+          "top_keywords": [],
+          "evidence_titles": [
+            "The Meaning of InteractivitySome Proposals for Definitions and Measures",
+            "Comparison of four primary methods for coordinating the interruption of people in human-computer interaction",
+            "The Human-Artifact Model: An Activity Theoretical Approach to Artifact Ecologies"
+          ],
+          "evidence_snippets": [
+            "New interactive applications, artifacts, and systems are constantly being added to our environments, and there are some concerns in the human-computer interaction research commu...",
+            "Interruptions can cause people to make mistakes or errors during human-computer interaction (HCI). Interruptions occur as an unavoidable side-effect of some important kinds of h...",
+            "Although devices of all shapes and sizes currently dominate the technological landscape, human-computer interaction (HCI) as a field is not yet theoretically equipped to match t..."
+          ],
+          "evidence_subjects": [
+            "Computer Science, Cybernetics",
+            "Computer Science, Theory & Methods",
+            "Computer Science"
+          ],
+          "cluster_label": "Information Systems",
+          "explanation": "Recommended because similar articles contain keywords such as related journal terms. Cluster: Information Systems."
+        },
+        {
+          "journal": "USER MODELING AND USER-ADAPTED INTERACTION",
+          "score": 0.047,
+          "confidence_score": 0.047,
+          "tfidf_score": 0.0042,
+          "bert_score": 0.0898,
+          "top_keywords": [
+            "user modeling",
+            "Human computer interaction",
+            "collaborative human-computer systems",
+            "high functionality applications",
+            "adaptive and adaptable systems"
+          ],
+          "evidence_titles": [
+            "User modeling in human-computer interaction",
+            "Personalization and context management"
+          ],
+          "evidence_snippets": [
+            "A fundamental objective of human-computer interaction research is to make systems more usable, more useful, and to provide users with experiences fitting their specific backgrou...",
+            "Supporting the individual user in his working, learning, or information access is one of the main goals of user modeling. Personal or group user models make it possible to repre..."
+          ],
+          "evidence_subjects": [
+            "Computer Science, Cybernetics",
+            "Computer Science"
+          ],
+          "cluster_label": "Information Systems",
+          "explanation": "Recommended because similar articles contain keywords such as user modeling, Human computer interaction, collaborative human-computer systems. Cluster: Information Systems."
+        },
+        {
+          "journal": "INFORMATION VISUALIZATION",
+          "score": 0.0466,
+          "confidence_score": 0.0466,
+          "tfidf_score": 0.0035,
+          "bert_score": 0.0897,
+          "top_keywords": [
+            "visual analytics",
+            "interaction theory",
+            "reasoning",
+            "Collaboration"
+          ],
+          "evidence_titles": [
+            "The science of interaction"
+          ],
+          "evidence_snippets": [
+            "There is a growing recognition within the visual analytics community that interaction and inquiry are inextricable. It is through the interactive manipulation of a visual interf..."
+          ],
+          "evidence_subjects": [
+            "Computer Science, Software Engineering",
+            "Computer Science"
+          ],
+          "cluster_label": "Information Systems",
+          "explanation": "Recommended because similar articles contain keywords such as visual analytics, interaction theory, reasoning. Cluster: Information Systems."
+        },
+        {
+          "journal": "ACM TRANSACTIONS ON COMPUTER-HUMAN INTERACTION",
+          "score": 0.0437,
+          "confidence_score": 0.0437,
+          "tfidf_score": 0.0059,
+          "bert_score": 0.0815,
+          "top_keywords": [
+            "human-computer interaction",
+            "embodied cognition",
+            "distributed cognition",
+            "situated cognition",
+            "interaction design"
+          ],
+          "evidence_titles": [
+            "Embodied Cognition and the Magical Future of Interaction Design",
+            "Mechanisms for Collaboration: A Design and Evaluation Framework for Multi-User Interfaces",
+            "Strong Concepts: Intermediate-Level Knowledge in Interaction Design Research"
+          ],
+          "evidence_snippets": [
+            "The theory of embodied cognition can provide HCI practitioners and theorists with new ideas about interaction and new principles for better designs. I support this claim with fo...",
+            "Multi-user interfaces are said to provide \"natural\" interaction in supporting collaboration, compared to individual and noncolocated technologies. We identify three mechanisms a...",
+            "Design-oriented research practices create opportunities for constructing knowledge that is more abstracted than particular instances, without aspiring to be at the scope of gene..."
+          ],
+          "evidence_subjects": [
+            "Computer Science, Cybernetics",
+            "Computer Science, Information Systems",
+            "Computer Science"
+          ],
+          "cluster_label": "Information Systems",
+          "explanation": "Recommended because similar articles contain keywords such as human-computer interaction, embodied cognition, distributed cognition. Cluster: Information Systems."
+        },
+        {
+          "journal": "NEURAL NETWORKS",
+          "score": 0.0418,
+          "confidence_score": 0.0418,
+          "tfidf_score": 0.0019,
+          "bert_score": 0.0818,
+          "top_keywords": [
+            "Joint action",
+            "Coordination",
+            "prediction",
+            "monitoring",
+            "Task representation"
+          ],
+          "evidence_titles": [
+            "A minimal architecture for joint action"
+          ],
+          "evidence_snippets": [
+            "What kinds of processes and representations make joint action possible? In this paper, we suggest a minimal architecture for joint action that focuses on representations, action..."
+          ],
+          "evidence_subjects": [
+            "Computer Science, Artificial Intelligence",
+            "Neurosciences",
+            "Computer Science"
+          ],
+          "cluster_label": "Artificial Intelligence",
+          "explanation": "Recommended because similar articles contain keywords such as Joint action, Coordination, prediction. Cluster: Artificial Intelligence."
+        }
+      ]
+    }
+  }
+]

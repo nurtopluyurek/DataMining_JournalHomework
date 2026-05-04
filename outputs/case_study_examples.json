@@ -1,0 +1,1171 @@
+[
+  {
+    "case_id": "case_ai_01",
+    "topic": "Deep Learning / Artificial Intelligence",
+    "abstract": "This study proposes a transformer-based deep learning framework for medical image classification. The model combines attention-guided feature extraction, contrastive pretraining, and uncertainty-aware decision calibration to improve robustness across multi-center imaging datasets. Experimental results show higher classification accuracy and better generalization than conventional convolutional baselines.",
+    "final_model": "tfidf",
+    "final_model_name": "TF-IDF Recommender",
+    "recommendations": {
+      "tfidf": [
+        {
+          "journal": "INTERNATIONAL JOURNAL OF PATTERN RECOGNITION AND ARTIFICIAL INTELLIGENCE",
+          "score": 0.0061,
+          "confidence_score": 0.0061,
+          "top_keywords": [
+            "deep learning",
+            "object classification",
+            "CNN",
+            "multi-contrast",
+            "tire defects"
+          ],
+          "evidence_titles": [
+            "Tire Defects Classification with Multi-Contrast Convolutional Neural Networks"
+          ],
+          "evidence_snippets": [
+            "The objective of this study is to improve the accuracy in tire defect classification with limited training samples under varying illuminations. We investigate an algorithm based..."
+          ],
+          "evidence_subjects": [
+            "Computer Science, Artificial Intelligence",
+            "Computer Science"
+          ],
+          "cluster_label": "Artificial Intelligence",
+          "explanation": "Recommended because similar articles contain keywords such as deep learning, object classification, CNN. Cluster: Artificial Intelligence."
+        },
+        {
+          "journal": "INTERNATIONAL JOURNAL OF DATA MINING AND BIOINFORMATICS",
+          "score": 0.0051,
+          "confidence_score": 0.0051,
+          "top_keywords": [
+            "cancer biomarkers",
+            "systems biology",
+            "feature selection",
+            "disease classification"
+          ],
+          "evidence_titles": [
+            "Module-based breast cancer classification"
+          ],
+          "evidence_snippets": [
+            "The reliability and reproducibility of gene biomarkers for classification of cancer patients has been challenged due to measurement noise and biological heterogeneity among pati..."
+          ],
+          "evidence_subjects": [
+            "Mathematical & Computational Biology"
+          ],
+          "cluster_label": "Mathematical & Computational Biology",
+          "explanation": "Recommended because similar articles contain keywords such as cancer biomarkers, systems biology, feature selection. Cluster: Mathematical & Computational Biology."
+        },
+        {
+          "journal": "IET COMPUTER VISION",
+          "score": 0.0049,
+          "confidence_score": 0.0049,
+          "top_keywords": [],
+          "evidence_titles": [],
+          "evidence_snippets": [],
+          "evidence_subjects": [],
+          "cluster_label": "Not available",
+          "explanation": "Recommended because similar articles contain keywords such as related journal terms. Cluster: Not available."
+        },
+        {
+          "journal": "INTERNATIONAL JOURNAL OF WEB SERVICES RESEARCH",
+          "score": 0.0048,
+          "confidence_score": 0.0048,
+          "top_keywords": [
+            "classification",
+            "Fashion Images",
+            "Feature Extraction",
+            "Social Data"
+          ],
+          "evidence_titles": [
+            "Probabilistic Classifier for Fashion Image Grouping Using Multi-Layer Feature Extraction Model"
+          ],
+          "evidence_snippets": [
+            "In this article, probabilistic classification model is designed for the fashion-related images collected from social networks. The proposed model is divided into two parts. The..."
+          ],
+          "evidence_subjects": [
+            "Computer Science, Information Systems",
+            "Computer Science, Software Engineering",
+            "Computer Science"
+          ],
+          "cluster_label": "Artificial Intelligence",
+          "explanation": "Recommended because similar articles contain keywords such as classification, Fashion Images, Feature Extraction. Cluster: Artificial Intelligence."
+        },
+        {
+          "journal": "NEUROCOMPUTING",
+          "score": 0.0046,
+          "confidence_score": 0.0046,
+          "top_keywords": [],
+          "evidence_titles": [],
+          "evidence_snippets": [],
+          "evidence_subjects": [],
+          "cluster_label": "Not available",
+          "explanation": "Recommended because similar articles contain keywords such as related journal terms. Cluster: Not available."
+        }
+      ],
+      "bert": [
+        {
+          "journal": "MEDICAL IMAGE ANALYSIS",
+          "score": 0.142,
+          "confidence_score": 0.142,
+          "top_keywords": [
+            "Image segmentation",
+            "Fully convolutionl networks",
+            "ResNets",
+            "Computed tomography",
+            "Electron microscopy"
+          ],
+          "evidence_titles": [
+            "Learning normalized inputs for iterative estimation in medical image segmentation",
+            "Brain tumor segmentation with Deep Neural Networks",
+            "Machine learning and radiology"
+          ],
+          "evidence_snippets": [
+            "In this paper, we introduce a simple, yet powerful pipeline for medical image segmentation that combines Fully Convolutional Networks (FCNs) with Fully Convolutional Residual Ne...",
+            "In this paper, we present a fully automatic brain tumor segmentation method based on Deep Neural Networks (DNNs). The proposed networks are tailored to glioblastomas (both low a...",
+            "In this paper, we give a short introduction to machine learning and survey its applications in radiology. We focused on six categories of applications in radiology: medical imag..."
+          ],
+          "evidence_subjects": [
+            "Computer Science, Artificial Intelligence",
+            "Computer Science, Interdisciplinary Applications",
+            "Engineering, Biomedical"
+          ],
+          "cluster_label": "Artificial Intelligence",
+          "explanation": "Recommended because similar articles contain keywords such as Image segmentation, Fully convolutionl networks, ResNets. Cluster: Artificial Intelligence."
+        },
+        {
+          "journal": "COMPUTER METHODS AND PROGRAMS IN BIOMEDICINE",
+          "score": 0.1208,
+          "confidence_score": 0.1208,
+          "top_keywords": [
+            "deep learning",
+            "convolutional neural network",
+            "classification",
+            "CT brain images",
+            "3D CNN"
+          ],
+          "evidence_titles": [
+            "Classification of CT brain images based on deep learning networks",
+            "Representation learning for mammography mass lesion classification with convolutional neural networks"
+          ],
+          "evidence_snippets": [
+            "While computerised tomography (CT) may have been the first imaging tool to study human brain, it has not yet been implemented into clinical decision making process for diagnosis...",
+            "Background and objective: The automatic classification of breast imaging lesions is currently an unsolved problem. This paper describes an innovative representation learning fra..."
+          ],
+          "evidence_subjects": [
+            "Computer Science, Interdisciplinary Applications",
+            "Computer Science, Theory & Methods",
+            "Engineering, Biomedical"
+          ],
+          "cluster_label": "Artificial Intelligence",
+          "explanation": "Recommended because similar articles contain keywords such as deep learning, convolutional neural network, classification. Cluster: Artificial Intelligence."
+        },
+        {
+          "journal": "JOURNAL OF BIOMEDICAL INFORMATICS",
+          "score": 0.112,
+          "confidence_score": 0.112,
+          "top_keywords": [
+            "Lung cancer stages",
+            "Nodule detection",
+            "deep learning",
+            "Convolutional neural networks (CNN)",
+            "mIoT (medical Internet of Things)"
+          ],
+          "evidence_titles": [
+            "Computer-Assisted Decision Support System in Pulmonary Cancer detection and stage classification on CT images"
+          ],
+          "evidence_snippets": [
+            "Pulmonary cancer is considered as one of the major causes of death worldwide. For the detection of lung cancer, computer-assisted diagnosis (CADx) systems have been designed. In..."
+          ],
+          "evidence_subjects": [
+            "Computer Science, Interdisciplinary Applications",
+            "Medical Informatics",
+            "Computer Science"
+          ],
+          "cluster_label": "Artificial Intelligence",
+          "explanation": "Recommended because similar articles contain keywords such as Lung cancer stages, Nodule detection, deep learning. Cluster: Artificial Intelligence."
+        },
+        {
+          "journal": "IBM JOURNAL OF RESEARCH AND DEVELOPMENT",
+          "score": 0.094,
+          "confidence_score": 0.094,
+          "top_keywords": [],
+          "evidence_titles": [
+            "Deep learning ensembles for melanoma recognition in dermoscopy images"
+          ],
+          "evidence_snippets": [
+            "Melanoma is the deadliest form of skin cancer While curable with early detection, only highly trained specialists are capable of accurately recognizing the disease. As expertise..."
+          ],
+          "evidence_subjects": [
+            "Computer Science, Hardware & Architecture",
+            "Computer Science, Information Systems",
+            "Computer Science, Software Engineering"
+          ],
+          "cluster_label": "Artificial Intelligence",
+          "explanation": "Recommended because similar articles contain keywords such as related journal terms. Cluster: Artificial Intelligence."
+        },
+        {
+          "journal": "IEEE JOURNAL OF BIOMEDICAL AND HEALTH INFORMATICS",
+          "score": 0.0839,
+          "confidence_score": 0.0839,
+          "top_keywords": [
+            "deep learning",
+            "Breast cancer",
+            "convolutional neural networks",
+            "lesion detection",
+            "transfer learning"
+          ],
+          "evidence_titles": [
+            "Automated Breast Ultrasound Lesions Detection Using Convolutional Neural Networks",
+            "Deep Learning for Health Informatics",
+            "Multimodal Neuroimaging Feature Learning With Multimodal Stacked Deep Polynomial Networks for Diagnosis of Alzheimer's Disease"
+          ],
+          "evidence_snippets": [
+            "Breast lesion detection using ultrasound imaging is considered an important step of computer-aided diagnosis systems. Over the past decade, researchers have demonstrated the pos...",
+            "With a massive influx of multimodality data, the role of data analytics in health informatics has grown rapidly in the last decade. This has also prompted increasing interests i...",
+            "The accurate diagnosis of Alzheimer's disease (AD) and its early stage, i.e., mild cognitive impairment, is essential for timely treatment and possible delay of AD. Fusion of mu..."
+          ],
+          "evidence_subjects": [
+            "Computer Science, Information Systems",
+            "Computer Science, Interdisciplinary Applications",
+            "Mathematical & Computational Biology"
+          ],
+          "cluster_label": "Artificial Intelligence",
+          "explanation": "Recommended because similar articles contain keywords such as deep learning, Breast cancer, convolutional neural networks. Cluster: Artificial Intelligence."
+        }
+      ],
+      "ensemble": [
+        {
+          "journal": "MEDICAL IMAGE ANALYSIS",
+          "score": 0.0731,
+          "confidence_score": 0.0731,
+          "tfidf_score": 0.0043,
+          "bert_score": 0.142,
+          "top_keywords": [
+            "Image segmentation",
+            "Fully convolutionl networks",
+            "ResNets",
+            "Computed tomography",
+            "Electron microscopy"
+          ],
+          "evidence_titles": [
+            "Learning normalized inputs for iterative estimation in medical image segmentation",
+            "Brain tumor segmentation with Deep Neural Networks",
+            "Machine learning and radiology"
+          ],
+          "evidence_snippets": [
+            "In this paper, we introduce a simple, yet powerful pipeline for medical image segmentation that combines Fully Convolutional Networks (FCNs) with Fully Convolutional Residual Ne...",
+            "In this paper, we present a fully automatic brain tumor segmentation method based on Deep Neural Networks (DNNs). The proposed networks are tailored to glioblastomas (both low a...",
+            "In this paper, we give a short introduction to machine learning and survey its applications in radiology. We focused on six categories of applications in radiology: medical imag..."
+          ],
+          "evidence_subjects": [
+            "Computer Science, Artificial Intelligence",
+            "Computer Science, Interdisciplinary Applications",
+            "Engineering, Biomedical"
+          ],
+          "cluster_label": "Artificial Intelligence",
+          "explanation": "Recommended because similar articles contain keywords such as Image segmentation, Fully convolutionl networks, ResNets. Cluster: Artificial Intelligence."
+        },
+        {
+          "journal": "COMPUTER METHODS AND PROGRAMS IN BIOMEDICINE",
+          "score": 0.0619,
+          "confidence_score": 0.0619,
+          "tfidf_score": 0.003,
+          "bert_score": 0.1208,
+          "top_keywords": [
+            "deep learning",
+            "convolutional neural network",
+            "classification",
+            "CT brain images",
+            "3D CNN"
+          ],
+          "evidence_titles": [
+            "Classification of CT brain images based on deep learning networks",
+            "Representation learning for mammography mass lesion classification with convolutional neural networks"
+          ],
+          "evidence_snippets": [
+            "While computerised tomography (CT) may have been the first imaging tool to study human brain, it has not yet been implemented into clinical decision making process for diagnosis...",
+            "Background and objective: The automatic classification of breast imaging lesions is currently an unsolved problem. This paper describes an innovative representation learning fra..."
+          ],
+          "evidence_subjects": [
+            "Computer Science, Interdisciplinary Applications",
+            "Computer Science, Theory & Methods",
+            "Engineering, Biomedical"
+          ],
+          "cluster_label": "Artificial Intelligence",
+          "explanation": "Recommended because similar articles contain keywords such as deep learning, convolutional neural network, classification. Cluster: Artificial Intelligence."
+        },
+        {
+          "journal": "JOURNAL OF BIOMEDICAL INFORMATICS",
+          "score": 0.0572,
+          "confidence_score": 0.0572,
+          "tfidf_score": 0.0025,
+          "bert_score": 0.112,
+          "top_keywords": [
+            "Lung cancer stages",
+            "Nodule detection",
+            "deep learning",
+            "Convolutional neural networks (CNN)",
+            "mIoT (medical Internet of Things)"
+          ],
+          "evidence_titles": [
+            "Computer-Assisted Decision Support System in Pulmonary Cancer detection and stage classification on CT images"
+          ],
+          "evidence_snippets": [
+            "Pulmonary cancer is considered as one of the major causes of death worldwide. For the detection of lung cancer, computer-assisted diagnosis (CADx) systems have been designed. In..."
+          ],
+          "evidence_subjects": [
+            "Computer Science, Interdisciplinary Applications",
+            "Medical Informatics",
+            "Computer Science"
+          ],
+          "cluster_label": "Artificial Intelligence",
+          "explanation": "Recommended because similar articles contain keywords such as Lung cancer stages, Nodule detection, deep learning. Cluster: Artificial Intelligence."
+        },
+        {
+          "journal": "IBM JOURNAL OF RESEARCH AND DEVELOPMENT",
+          "score": 0.0482,
+          "confidence_score": 0.0482,
+          "tfidf_score": 0.0024,
+          "bert_score": 0.094,
+          "top_keywords": [],
+          "evidence_titles": [
+            "Deep learning ensembles for melanoma recognition in dermoscopy images"
+          ],
+          "evidence_snippets": [
+            "Melanoma is the deadliest form of skin cancer While curable with early detection, only highly trained specialists are capable of accurately recognizing the disease. As expertise..."
+          ],
+          "evidence_subjects": [
+            "Computer Science, Hardware & Architecture",
+            "Computer Science, Information Systems",
+            "Computer Science, Software Engineering"
+          ],
+          "cluster_label": "Artificial Intelligence",
+          "explanation": "Recommended because similar articles contain keywords such as related journal terms. Cluster: Artificial Intelligence."
+        },
+        {
+          "journal": "IEEE JOURNAL OF BIOMEDICAL AND HEALTH INFORMATICS",
+          "score": 0.044,
+          "confidence_score": 0.044,
+          "tfidf_score": 0.0042,
+          "bert_score": 0.0839,
+          "top_keywords": [
+            "deep learning",
+            "Breast cancer",
+            "convolutional neural networks",
+            "lesion detection",
+            "transfer learning"
+          ],
+          "evidence_titles": [
+            "Automated Breast Ultrasound Lesions Detection Using Convolutional Neural Networks",
+            "Deep Learning for Health Informatics",
+            "Multimodal Neuroimaging Feature Learning With Multimodal Stacked Deep Polynomial Networks for Diagnosis of Alzheimer's Disease"
+          ],
+          "evidence_snippets": [
+            "Breast lesion detection using ultrasound imaging is considered an important step of computer-aided diagnosis systems. Over the past decade, researchers have demonstrated the pos...",
+            "With a massive influx of multimodality data, the role of data analytics in health informatics has grown rapidly in the last decade. This has also prompted increasing interests i...",
+            "The accurate diagnosis of Alzheimer's disease (AD) and its early stage, i.e., mild cognitive impairment, is essential for timely treatment and possible delay of AD. Fusion of mu..."
+          ],
+          "evidence_subjects": [
+            "Computer Science, Information Systems",
+            "Computer Science, Interdisciplinary Applications",
+            "Mathematical & Computational Biology"
+          ],
+          "cluster_label": "Artificial Intelligence",
+          "explanation": "Recommended because similar articles contain keywords such as deep learning, Breast cancer, convolutional neural networks. Cluster: Artificial Intelligence."
+        }
+      ]
+    },
+    "top_1_by_model": {
+      "tfidf": "INTERNATIONAL JOURNAL OF PATTERN RECOGNITION AND ARTIFICIAL INTELLIGENCE",
+      "bert": "MEDICAL IMAGE ANALYSIS",
+      "ensemble": "MEDICAL IMAGE ANALYSIS"
+    }
+  },
+  {
+    "case_id": "case_net_01",
+    "topic": "Computer Networks / Wireless Systems",
+    "abstract": "We present an adaptive routing and congestion-control strategy for wireless sensor and edge networks. The method jointly optimizes packet scheduling, link-quality estimation, and energy-aware forwarding to reduce delay and packet loss under changing traffic conditions. Simulations demonstrate improved throughput and network lifetime relative to existing distributed routing protocols.",
+    "final_model": "tfidf",
+    "final_model_name": "TF-IDF Recommender",
+    "recommendations": {
+      "tfidf": [
+        {
+          "journal": "IEEE-ACM TRANSACTIONS ON NETWORKING",
+          "score": 0.0066,
+          "confidence_score": 0.0066,
+          "top_keywords": [],
+          "evidence_titles": [],
+          "evidence_snippets": [],
+          "evidence_subjects": [],
+          "cluster_label": "Not available",
+          "explanation": "Recommended because similar articles contain keywords such as related journal terms. Cluster: Not available."
+        },
+        {
+          "journal": "ACM TRANSACTIONS ON SENSOR NETWORKS",
+          "score": 0.0064,
+          "confidence_score": 0.0064,
+          "top_keywords": [
+            "experimentation",
+            "performance",
+            "design",
+            "wireless sensor networks",
+            "measurement"
+          ],
+          "evidence_titles": [
+            "Radio Link Quality Estimation in Wireless Sensor Networks: A Survey",
+            "Opportunistic Routing in Low Duty-Cycle Wireless Sensor Networks"
+          ],
+          "evidence_snippets": [
+            "Radio link quality estimation in Wireless Sensor Networks (WSNs) has a fundamental impact on the network performance and also affects the design of higher-layer protocols. There...",
+            "Opportunistic routing is widely known to have substantially better performance than unicast routing in wireless networks with lossy links. However, wireless sensor networks are..."
+          ],
+          "evidence_subjects": [
+            "Computer Science, Information Systems",
+            "Telecommunications",
+            "Computer Science"
+          ],
+          "cluster_label": "Telecommunications",
+          "explanation": "Recommended because similar articles contain keywords such as experimentation, performance, design. Cluster: Telecommunications."
+        },
+        {
+          "journal": "IEEE NETWORK",
+          "score": 0.0062,
+          "confidence_score": 0.0062,
+          "top_keywords": [],
+          "evidence_titles": [],
+          "evidence_snippets": [],
+          "evidence_subjects": [],
+          "cluster_label": "Not available",
+          "explanation": "Recommended because similar articles contain keywords such as related journal terms. Cluster: Not available."
+        },
+        {
+          "journal": "IEEE TRANSACTIONS ON COMPUTERS",
+          "score": 0.0052,
+          "confidence_score": 0.0052,
+          "top_keywords": [
+            "Networks-on-chip",
+            "Adaptive routing",
+            "deadlock-free routing",
+            "selection strategy",
+            "performance analysis"
+          ],
+          "evidence_titles": [
+            "Implementation and analysis of a new selection strategy for adaptive routing in networks-on-chip"
+          ],
+          "evidence_snippets": [
+            "Efficient and deadlock-free routing is critical to the performance of networks-on-chip. The effectiveness of any adaptive routing algorithm strongly depends on the underlying se..."
+          ],
+          "evidence_subjects": [
+            "Computer Science, Hardware & Architecture",
+            "Engineering, Electrical & Electronic",
+            "Computer Science"
+          ],
+          "cluster_label": "Information Systems",
+          "explanation": "Recommended because similar articles contain keywords such as Networks-on-chip, Adaptive routing, deadlock-free routing. Cluster: Information Systems."
+        },
+        {
+          "journal": "AD HOC & SENSOR WIRELESS NETWORKS",
+          "score": 0.0051,
+          "confidence_score": 0.0051,
+          "top_keywords": [
+            "Routing protocol",
+            "link quality",
+            "asymmetric links",
+            "packet delivery ratio",
+            "acoustic medium"
+          ],
+          "evidence_titles": [
+            "Pressure Sensor Based Reliable (PSBR) Routing Protocol for Underwater Acoustic Sensor Networks"
+          ],
+          "evidence_snippets": [
+            "Wireless link quality varies significantly in underwater networks due to the presence of environmental factors such as multipath effect, attenuation, temperature salinity and no..."
+          ],
+          "evidence_subjects": [
+            "Computer Science, Information Systems",
+            "Telecommunications",
+            "Computer Science"
+          ],
+          "cluster_label": "Telecommunications",
+          "explanation": "Recommended because similar articles contain keywords such as Routing protocol, link quality, asymmetric links. Cluster: Telecommunications."
+        }
+      ],
+      "bert": [
+        {
+          "journal": "ACM TRANSACTIONS ON SENSOR NETWORKS",
+          "score": 0.0807,
+          "confidence_score": 0.0807,
+          "top_keywords": [
+            "design",
+            "experimentation",
+            "performance",
+            "sensor networks",
+            "congestion control"
+          ],
+          "evidence_titles": [
+            "Energy-Efficient Congestion Detection and Avoidance in Sensor Networks",
+            "Opportunistic Routing in Low Duty-Cycle Wireless Sensor Networks",
+            "CTP: An Efficient, Robust, and Reliable Collection Tree Protocol for Wireless Sensor Networks"
+          ],
+          "evidence_snippets": [
+            "Event-driven sensor networks operate under an idle or light load and then suddenly become active in response to a detected ormonitored event. The transport of event impulses is...",
+            "Opportunistic routing is widely known to have substantially better performance than unicast routing in wireless networks with lossy links. However, wireless sensor networks are...",
+            "We describe CTP, a collection routing protocol for wireless sensor networks. CTP uses three techniques to provide efficient, robust, and reliable routing in highly dynamic netwo..."
+          ],
+          "evidence_subjects": [
+            "Computer Science, Information Systems",
+            "Telecommunications",
+            "Computer Science"
+          ],
+          "cluster_label": "Telecommunications",
+          "explanation": "Recommended because similar articles contain keywords such as design, experimentation, performance. Cluster: Telecommunications."
+        },
+        {
+          "journal": "IEICE TRANSACTIONS ON COMMUNICATIONS",
+          "score": 0.078,
+          "confidence_score": 0.078,
+          "top_keywords": [
+            "Sensor network",
+            "multi-constrained QoS",
+            "heterogeneous traffic",
+            "geographic routing",
+            "delay-differentiated packet forwarding"
+          ],
+          "evidence_titles": [
+            "Multi-constrained QoS geographic routing for heterogeneous traffic in sensor networks"
+          ],
+          "evidence_snippets": [
+            "Sensor networks that carry heterogeneous traffics and are responsible for reporting very time-critical important events necessitate an efficient and robust data dissemination fr..."
+          ],
+          "evidence_subjects": [
+            "Engineering, Electrical & Electronic",
+            "Telecommunications",
+            "Engineering"
+          ],
+          "cluster_label": "Telecommunications",
+          "explanation": "Recommended because similar articles contain keywords such as Sensor network, multi-constrained QoS, heterogeneous traffic. Cluster: Telecommunications."
+        },
+        {
+          "journal": "AD HOC & SENSOR WIRELESS NETWORKS",
+          "score": 0.0648,
+          "confidence_score": 0.0648,
+          "top_keywords": [
+            "wireless sensor networks",
+            "Energy Efficiency",
+            "lifetime",
+            "Controlled mobility",
+            "multi-hop communications"
+          ],
+          "evidence_titles": [
+            "Adaptive Sink Mobility in Event-Driven Densely Deployed Wireless Sensor Networks",
+            "Classification of Energy-Efficient Routing Protocols for Wireless Sensor Networks"
+          ],
+          "evidence_snippets": [
+            "Optimizing energy consumption in wireless sensor networks is of, paramount importance. There is a recent trend to deal with this problem by introducing mobile elements (sensors...",
+            "In recent years, research on Wireless Sensor Networks (WSNs) has become one of the main topics in electronic and computer fields. Since, the WSNs include many low cost and low p..."
+          ],
+          "evidence_subjects": [
+            "Computer Science, Information Systems",
+            "Telecommunications",
+            "Computer Science"
+          ],
+          "cluster_label": "Telecommunications",
+          "explanation": "Recommended because similar articles contain keywords such as wireless sensor networks, Energy Efficiency, lifetime. Cluster: Telecommunications."
+        },
+        {
+          "journal": "CLUSTER COMPUTING-THE JOURNAL OF NETWORKS SOFTWARE TOOLS AND APPLICATIONS",
+          "score": 0.0647,
+          "confidence_score": 0.0647,
+          "top_keywords": [
+            "sensor networks",
+            "QoS routing",
+            "energy-aware routing",
+            "real-time traffic"
+          ],
+          "evidence_titles": [
+            "Energy and QoS aware routing in wireless sensor networks"
+          ],
+          "evidence_snippets": [
+            "Many new routing protocols have been proposed for wireless sensor networks in recent years. Almost all of the routing protocols considered energy efficiency as the ultimate obje..."
+          ],
+          "evidence_subjects": [
+            "Computer Science, Information Systems",
+            "Computer Science, Theory & Methods",
+            "Computer Science"
+          ],
+          "cluster_label": "Telecommunications",
+          "explanation": "Recommended because similar articles contain keywords such as sensor networks, QoS routing, energy-aware routing. Cluster: Telecommunications."
+        },
+        {
+          "journal": "JOURNAL OF PARALLEL AND DISTRIBUTED COMPUTING",
+          "score": 0.0588,
+          "confidence_score": 0.0588,
+          "top_keywords": [
+            "wireless sensor networks",
+            "multipath routing",
+            "Energy Efficiency",
+            "Quality of Service",
+            "forward error correction"
+          ],
+          "evidence_titles": [
+            "Energy efficient and QoS based routing protocol for wireless sensor networks",
+            "Energy optimal data propagation in wireless sensor networks"
+          ],
+          "evidence_snippets": [
+            "The increasing demand for real-time applications in Wireless Sensor Networks (WSNs) has made the Quality of Service (QoS) based communication protocols an interesting and hot re...",
+            "We propose an algorithm to compute the optimal parameters of a probabilistic data propagation algorithm for wireless sensor networks (WSN). The probabilistic data propagation al..."
+          ],
+          "evidence_subjects": [
+            "Computer Science, Theory & Methods",
+            "Computer Science"
+          ],
+          "cluster_label": "Telecommunications",
+          "explanation": "Recommended because similar articles contain keywords such as wireless sensor networks, multipath routing, Energy Efficiency. Cluster: Telecommunications."
+        }
+      ],
+      "ensemble": [
+        {
+          "journal": "ACM TRANSACTIONS ON SENSOR NETWORKS",
+          "score": 0.0436,
+          "confidence_score": 0.0436,
+          "tfidf_score": 0.0064,
+          "bert_score": 0.0807,
+          "top_keywords": [
+            "design",
+            "experimentation",
+            "performance",
+            "sensor networks",
+            "congestion control"
+          ],
+          "evidence_titles": [
+            "Energy-Efficient Congestion Detection and Avoidance in Sensor Networks",
+            "Opportunistic Routing in Low Duty-Cycle Wireless Sensor Networks",
+            "CTP: An Efficient, Robust, and Reliable Collection Tree Protocol for Wireless Sensor Networks"
+          ],
+          "evidence_snippets": [
+            "Event-driven sensor networks operate under an idle or light load and then suddenly become active in response to a detected ormonitored event. The transport of event impulses is...",
+            "Opportunistic routing is widely known to have substantially better performance than unicast routing in wireless networks with lossy links. However, wireless sensor networks are...",
+            "We describe CTP, a collection routing protocol for wireless sensor networks. CTP uses three techniques to provide efficient, robust, and reliable routing in highly dynamic netwo..."
+          ],
+          "evidence_subjects": [
+            "Computer Science, Information Systems",
+            "Telecommunications",
+            "Computer Science"
+          ],
+          "cluster_label": "Telecommunications",
+          "explanation": "Recommended because similar articles contain keywords such as design, experimentation, performance. Cluster: Telecommunications."
+        },
+        {
+          "journal": "IEICE TRANSACTIONS ON COMMUNICATIONS",
+          "score": 0.0415,
+          "confidence_score": 0.0415,
+          "tfidf_score": 0.005,
+          "bert_score": 0.078,
+          "top_keywords": [
+            "Sensor network",
+            "multi-constrained QoS",
+            "heterogeneous traffic",
+            "geographic routing",
+            "delay-differentiated packet forwarding"
+          ],
+          "evidence_titles": [
+            "Multi-constrained QoS geographic routing for heterogeneous traffic in sensor networks"
+          ],
+          "evidence_snippets": [
+            "Sensor networks that carry heterogeneous traffics and are responsible for reporting very time-critical important events necessitate an efficient and robust data dissemination fr..."
+          ],
+          "evidence_subjects": [
+            "Engineering, Electrical & Electronic",
+            "Telecommunications",
+            "Engineering"
+          ],
+          "cluster_label": "Telecommunications",
+          "explanation": "Recommended because similar articles contain keywords such as Sensor network, multi-constrained QoS, heterogeneous traffic. Cluster: Telecommunications."
+        },
+        {
+          "journal": "AD HOC & SENSOR WIRELESS NETWORKS",
+          "score": 0.0349,
+          "confidence_score": 0.0349,
+          "tfidf_score": 0.0051,
+          "bert_score": 0.0648,
+          "top_keywords": [
+            "wireless sensor networks",
+            "Energy Efficiency",
+            "lifetime",
+            "Controlled mobility",
+            "multi-hop communications"
+          ],
+          "evidence_titles": [
+            "Adaptive Sink Mobility in Event-Driven Densely Deployed Wireless Sensor Networks",
+            "Classification of Energy-Efficient Routing Protocols for Wireless Sensor Networks"
+          ],
+          "evidence_snippets": [
+            "Optimizing energy consumption in wireless sensor networks is of, paramount importance. There is a recent trend to deal with this problem by introducing mobile elements (sensors...",
+            "In recent years, research on Wireless Sensor Networks (WSNs) has become one of the main topics in electronic and computer fields. Since, the WSNs include many low cost and low p..."
+          ],
+          "evidence_subjects": [
+            "Computer Science, Information Systems",
+            "Telecommunications",
+            "Computer Science"
+          ],
+          "cluster_label": "Telecommunications",
+          "explanation": "Recommended because similar articles contain keywords such as wireless sensor networks, Energy Efficiency, lifetime. Cluster: Telecommunications."
+        },
+        {
+          "journal": "CLUSTER COMPUTING-THE JOURNAL OF NETWORKS SOFTWARE TOOLS AND APPLICATIONS",
+          "score": 0.0341,
+          "confidence_score": 0.0341,
+          "tfidf_score": 0.0036,
+          "bert_score": 0.0647,
+          "top_keywords": [
+            "sensor networks",
+            "QoS routing",
+            "energy-aware routing",
+            "real-time traffic"
+          ],
+          "evidence_titles": [
+            "Energy and QoS aware routing in wireless sensor networks"
+          ],
+          "evidence_snippets": [
+            "Many new routing protocols have been proposed for wireless sensor networks in recent years. Almost all of the routing protocols considered energy efficiency as the ultimate obje..."
+          ],
+          "evidence_subjects": [
+            "Computer Science, Information Systems",
+            "Computer Science, Theory & Methods",
+            "Computer Science"
+          ],
+          "cluster_label": "Telecommunications",
+          "explanation": "Recommended because similar articles contain keywords such as sensor networks, QoS routing, energy-aware routing. Cluster: Telecommunications."
+        },
+        {
+          "journal": "IEEE TRANSACTIONS ON MOBILE COMPUTING",
+          "score": 0.0305,
+          "confidence_score": 0.0305,
+          "tfidf_score": 0.0035,
+          "bert_score": 0.0576,
+          "top_keywords": [],
+          "evidence_titles": [],
+          "evidence_snippets": [],
+          "evidence_subjects": [],
+          "cluster_label": "Not available",
+          "explanation": "Recommended because similar articles contain keywords such as related journal terms. Cluster: Not available."
+        }
+      ]
+    },
+    "top_1_by_model": {
+      "tfidf": "IEEE-ACM TRANSACTIONS ON NETWORKING",
+      "bert": "ACM TRANSACTIONS ON SENSOR NETWORKS",
+      "ensemble": "ACM TRANSACTIONS ON SENSOR NETWORKS"
+    }
+  },
+  {
+    "case_id": "case_se_01",
+    "topic": "Software Engineering / Quality Assurance",
+    "abstract": "This paper introduces a data-driven defect prediction pipeline for large software repositories. Static code metrics, issue history, and change-level process features are fused to identify fault-prone modules before release. The empirical evaluation shows that the proposed model improves early bug detection and supports more effective testing prioritization in continuous integration environments.",
+    "final_model": "tfidf",
+    "final_model_name": "TF-IDF Recommender",
+    "recommendations": {
+      "tfidf": [
+        {
+          "journal": "IEEE TRANSACTIONS ON SOFTWARE ENGINEERING",
+          "score": 0.0098,
+          "confidence_score": 0.0098,
+          "top_keywords": [
+            "complexity measures",
+            "data mining",
+            "Formal methods",
+            "Statistical methods",
+            "Software defect prediction"
+          ],
+          "evidence_titles": [
+            "Benchmarking classification models for software defect prediction: A proposed framework and novel findings",
+            "Quantitative analysis of faults and failures in a complex software system",
+            "An Empirical Comparison of Model Validation Techniques for Defect Prediction Models"
+          ],
+          "evidence_snippets": [
+            "Software defect prediction strives to improve software quality and testing efficiency by constructing predictive classification models from code attributes to enable a timely id...",
+            "The dearth of published empirical data on major industrial systems has been one of the reasons that software engineering has failed to establish a proper scientific basis. In th...",
+            "Defect prediction models help software quality assurance teams to allocate their limited resources to the most defect-prone modules. Model validation techniques, such as k-fold..."
+          ],
+          "evidence_subjects": [
+            "Computer Science, Software Engineering",
+            "Engineering, Electrical & Electronic",
+            "Computer Science"
+          ],
+          "cluster_label": "Artificial Intelligence",
+          "explanation": "Recommended because similar articles contain keywords such as complexity measures, data mining, Formal methods. Cluster: Artificial Intelligence."
+        },
+        {
+          "journal": "EMPIRICAL SOFTWARE ENGINEERING",
+          "score": 0.007,
+          "confidence_score": 0.007,
+          "top_keywords": [
+            "Defect prediction",
+            "empirical study",
+            "Just-in-time prediction",
+            "Bayesian networks",
+            "Source code metrics"
+          ],
+          "evidence_titles": [
+            "Studying just-in-time defect prediction using cross-project models",
+            "Software defect prediction using Bayesian networks",
+            "Evaluating defect prediction approaches: a benchmark and an extensive comparison"
+          ],
+          "evidence_snippets": [
+            "Unlike traditional defect prediction models that identify defect-prone modules, Just-In-Time (JIT) defect prediction models identify defect-inducing changes. As such, JIT defect...",
+            "There are lots of different software metrics discovered and used for defect prediction in the literature. Instead of dealing with so many metrics, it would be practical and easy...",
+            "Reliably predicting software defects is one of the holy grails of software engineering. Researchers have devised and implemented a plethora of defect/bug prediction approaches v..."
+          ],
+          "evidence_subjects": [
+            "Computer Science, Software Engineering",
+            "Computer Science"
+          ],
+          "cluster_label": "Software Engineering",
+          "explanation": "Recommended because similar articles contain keywords such as Defect prediction, empirical study, Just-in-time prediction. Cluster: Software Engineering."
+        },
+        {
+          "journal": "AUTOMATED SOFTWARE ENGINEERING",
+          "score": 0.0057,
+          "confidence_score": 0.0057,
+          "top_keywords": [
+            "Software defect prediction",
+            "sampling",
+            "Quality assurance",
+            "machine learning",
+            "Active semi-supervised learning"
+          ],
+          "evidence_titles": [
+            "Sample-based software defect prediction with active and semi-supervised learning"
+          ],
+          "evidence_snippets": [
+            "Software defect prediction can help us better understand and control software quality. Current defect prediction techniques are mainly based on a sufficient amount of historical..."
+          ],
+          "evidence_subjects": [
+            "Computer Science, Software Engineering",
+            "Computer Science"
+          ],
+          "cluster_label": "Artificial Intelligence",
+          "explanation": "Recommended because similar articles contain keywords such as Software defect prediction, sampling, Quality assurance. Cluster: Artificial Intelligence."
+        },
+        {
+          "journal": "INTERNATIONAL JOURNAL OF SOFTWARE ENGINEERING AND KNOWLEDGE ENGINEERING",
+          "score": 0.0053,
+          "confidence_score": 0.0053,
+          "top_keywords": [
+            "software metrics",
+            "high assurance",
+            "embedded systems",
+            "Software reliability",
+            "case-based reasoning"
+          ],
+          "evidence_titles": [
+            "Predicting fault-prone modules in embedded systems using analogy-based classification models",
+            "AN EMPIRICAL STUDY OF FEATURE RANKING TECHNIQUES FOR SOFTWARE QUALITY PREDICTION"
+          ],
+          "evidence_snippets": [
+            "Embedded systems have become ubiquitous and essential entities in our ever growing high-tech world. The backbone of today's information-highway infrastructure are embedded syste...",
+            "The primary goal of software quality engineering is to produce a high quality software product through the use of some specific techniques and processes. One strategy is applyin..."
+          ],
+          "evidence_subjects": [
+            "Computer Science, Artificial Intelligence",
+            "Computer Science, Software Engineering",
+            "Engineering, Electrical & Electronic"
+          ],
+          "cluster_label": "Software Engineering",
+          "explanation": "Recommended because similar articles contain keywords such as software metrics, high assurance, embedded systems. Cluster: Software Engineering."
+        },
+        {
+          "journal": "JOURNAL OF SYSTEMS AND SOFTWARE",
+          "score": 0.005,
+          "confidence_score": 0.005,
+          "top_keywords": [
+            "continuous integration",
+            "Agile software development",
+            "continuous software engineering",
+            "lean software development",
+            "DevOps"
+          ],
+          "evidence_titles": [
+            "Modeling continuous integration practice differences in industry software development",
+            "Continuous software engineering: A roadmap and agenda"
+          ],
+          "evidence_snippets": [
+            "Continuous integration is a software practice where developers integrate frequently, at least daily. While this is an ostensibly simple concept, it does leave ample room for int...",
+            "Throughout its short history, software development has been characterized by harmful disconnects between important activities such as planning, development and implementation. T..."
+          ],
+          "evidence_subjects": [
+            "Computer Science, Software Engineering",
+            "Computer Science, Theory & Methods",
+            "Computer Science"
+          ],
+          "cluster_label": "Software Engineering",
+          "explanation": "Recommended because similar articles contain keywords such as continuous integration, Agile software development, continuous software engineering. Cluster: Software Engineering."
+        }
+      ],
+      "bert": [
+        {
+          "journal": "IEEE TRANSACTIONS ON SOFTWARE ENGINEERING",
+          "score": 0.1742,
+          "confidence_score": 0.1742,
+          "top_keywords": [
+            "data mining",
+            "software metrics",
+            "complexity measures",
+            "Formal methods",
+            "Statistical methods"
+          ],
+          "evidence_titles": [
+            "Benchmarking classification models for software defect prediction: A proposed framework and novel findings",
+            "Quantitative analysis of faults and failures in a complex software system",
+            "Classifying software changes: Clean or buggy?"
+          ],
+          "evidence_snippets": [
+            "Software defect prediction strives to improve software quality and testing efficiency by constructing predictive classification models from code attributes to enable a timely id...",
+            "The dearth of published empirical data on major industrial systems has been one of the reasons that software engineering has failed to establish a proper scientific basis. In th...",
+            "This paper introduces a new technique for predicting latent software bugs, called change classification. Change classification uses a machine learning classifier to determine wh..."
+          ],
+          "evidence_subjects": [
+            "Computer Science, Software Engineering",
+            "Engineering, Electrical & Electronic",
+            "Computer Science"
+          ],
+          "cluster_label": "Artificial Intelligence",
+          "explanation": "Recommended because similar articles contain keywords such as data mining, software metrics, complexity measures. Cluster: Artificial Intelligence."
+        },
+        {
+          "journal": "COMPUTER SCIENCE AND INFORMATION SYSTEMS",
+          "score": 0.1524,
+          "confidence_score": 0.1524,
+          "top_keywords": [
+            "Software defect prediction",
+            "data collection issues",
+            "dataset bias",
+            "bug-code linking",
+            "open-source projects"
+          ],
+          "evidence_titles": [
+            "A Systematic Data Collection Procedure for Software Defect Prediction"
+          ],
+          "evidence_snippets": [
+            "Software defect prediction research relies on data that must be collected from otherwise separate repositories. To achieve greater generalization of the results, standardized pr..."
+          ],
+          "evidence_subjects": [
+            "Computer Science, Information Systems",
+            "Computer Science, Software Engineering",
+            "Computer Science"
+          ],
+          "cluster_label": "Software Engineering",
+          "explanation": "Recommended because similar articles contain keywords such as Software defect prediction, data collection issues, dataset bias. Cluster: Software Engineering."
+        },
+        {
+          "journal": "EMPIRICAL SOFTWARE ENGINEERING",
+          "score": 0.1356,
+          "confidence_score": 0.1356,
+          "top_keywords": [
+            "Defect prediction",
+            "Source code metrics",
+            "Change metrics",
+            "Bayesian networks",
+            "Software bug characteristics"
+          ],
+          "evidence_titles": [
+            "Evaluating defect prediction approaches: a benchmark and an extensive comparison",
+            "Software defect prediction using Bayesian networks",
+            "Bug characteristics in open source software"
+          ],
+          "evidence_snippets": [
+            "Reliably predicting software defects is one of the holy grails of software engineering. Researchers have devised and implemented a plethora of defect/bug prediction approaches v...",
+            "There are lots of different software metrics discovered and used for defect prediction in the literature. Instead of dealing with so many metrics, it would be practical and easy...",
+            "To design effective tools for detecting and recovering from software failures requires a deep understanding of software bug characteristics. We study software bug characteristic..."
+          ],
+          "evidence_subjects": [
+            "Computer Science, Software Engineering",
+            "Computer Science"
+          ],
+          "cluster_label": "Software Engineering",
+          "explanation": "Recommended because similar articles contain keywords such as Defect prediction, Source code metrics, Change metrics. Cluster: Software Engineering."
+        },
+        {
+          "journal": "JOURNAL OF WEB ENGINEERING",
+          "score": 0.1293,
+          "confidence_score": 0.1293,
+          "top_keywords": [
+            "defect density",
+            "Repository Metrics",
+            "Simple and Multiple Linear Regressions"
+          ],
+          "evidence_titles": [
+            "PREDICTION OF DEFECT DENSITY FOR OPEN SOURCE SOFTWARE USING REPOSITORY METRICS"
+          ],
+          "evidence_snippets": [
+            "Open source software refers to software with unrestricted access for use or modification. Many software development organizations are using this open source methodology in their..."
+          ],
+          "evidence_subjects": [
+            "Computer Science, Software Engineering",
+            "Computer Science, Theory & Methods",
+            "Computer Science"
+          ],
+          "cluster_label": "Software Engineering",
+          "explanation": "Recommended because similar articles contain keywords such as defect density, Repository Metrics, Simple and Multiple Linear Regressions. Cluster: Software Engineering."
+        },
+        {
+          "journal": "BELL LABS TECHNICAL JOURNAL",
+          "score": 0.1094,
+          "confidence_score": 0.1094,
+          "top_keywords": [],
+          "evidence_titles": [
+            "Predicting risk of software changes"
+          ],
+          "evidence_snippets": [
+            "Reducing the number of software failures is one of the most challenging problems of software production. We assume that software development proceeds as a series of changes and..."
+          ],
+          "evidence_subjects": [
+            "Computer Science, Information Systems",
+            "Engineering, Electrical & Electronic",
+            "Telecommunications"
+          ],
+          "cluster_label": "Software Engineering",
+          "explanation": "Recommended because similar articles contain keywords such as related journal terms. Cluster: Software Engineering."
+        }
+      ],
+      "ensemble": [
+        {
+          "journal": "IEEE TRANSACTIONS ON SOFTWARE ENGINEERING",
+          "score": 0.092,
+          "confidence_score": 0.092,
+          "tfidf_score": 0.0098,
+          "bert_score": 0.1742,
+          "top_keywords": [
+            "data mining",
+            "software metrics",
+            "complexity measures",
+            "Formal methods",
+            "Statistical methods"
+          ],
+          "evidence_titles": [
+            "Benchmarking classification models for software defect prediction: A proposed framework and novel findings",
+            "Quantitative analysis of faults and failures in a complex software system",
+            "Classifying software changes: Clean or buggy?"
+          ],
+          "evidence_snippets": [
+            "Software defect prediction strives to improve software quality and testing efficiency by constructing predictive classification models from code attributes to enable a timely id...",
+            "The dearth of published empirical data on major industrial systems has been one of the reasons that software engineering has failed to establish a proper scientific basis. In th...",
+            "This paper introduces a new technique for predicting latent software bugs, called change classification. Change classification uses a machine learning classifier to determine wh..."
+          ],
+          "evidence_subjects": [
+            "Computer Science, Software Engineering",
+            "Engineering, Electrical & Electronic",
+            "Computer Science"
+          ],
+          "cluster_label": "Artificial Intelligence",
+          "explanation": "Recommended because similar articles contain keywords such as data mining, software metrics, complexity measures. Cluster: Artificial Intelligence."
+        },
+        {
+          "journal": "COMPUTER SCIENCE AND INFORMATION SYSTEMS",
+          "score": 0.0782,
+          "confidence_score": 0.0782,
+          "tfidf_score": 0.0041,
+          "bert_score": 0.1524,
+          "top_keywords": [
+            "Software defect prediction",
+            "data collection issues",
+            "dataset bias",
+            "bug-code linking",
+            "open-source projects"
+          ],
+          "evidence_titles": [
+            "A Systematic Data Collection Procedure for Software Defect Prediction"
+          ],
+          "evidence_snippets": [
+            "Software defect prediction research relies on data that must be collected from otherwise separate repositories. To achieve greater generalization of the results, standardized pr..."
+          ],
+          "evidence_subjects": [
+            "Computer Science, Information Systems",
+            "Computer Science, Software Engineering",
+            "Computer Science"
+          ],
+          "cluster_label": "Software Engineering",
+          "explanation": "Recommended because similar articles contain keywords such as Software defect prediction, data collection issues, dataset bias. Cluster: Software Engineering."
+        },
+        {
+          "journal": "EMPIRICAL SOFTWARE ENGINEERING",
+          "score": 0.0713,
+          "confidence_score": 0.0713,
+          "tfidf_score": 0.007,
+          "bert_score": 0.1356,
+          "top_keywords": [
+            "Defect prediction",
+            "Source code metrics",
+            "Change metrics",
+            "Bayesian networks",
+            "Software bug characteristics"
+          ],
+          "evidence_titles": [
+            "Evaluating defect prediction approaches: a benchmark and an extensive comparison",
+            "Software defect prediction using Bayesian networks",
+            "Bug characteristics in open source software"
+          ],
+          "evidence_snippets": [
+            "Reliably predicting software defects is one of the holy grails of software engineering. Researchers have devised and implemented a plethora of defect/bug prediction approaches v...",
+            "There are lots of different software metrics discovered and used for defect prediction in the literature. Instead of dealing with so many metrics, it would be practical and easy...",
+            "To design effective tools for detecting and recovering from software failures requires a deep understanding of software bug characteristics. We study software bug characteristic..."
+          ],
+          "evidence_subjects": [
+            "Computer Science, Software Engineering",
+            "Computer Science"
+          ],
+          "cluster_label": "Software Engineering",
+          "explanation": "Recommended because similar articles contain keywords such as Defect prediction, Source code metrics, Change metrics. Cluster: Software Engineering."
+        },
+        {
+          "journal": "JOURNAL OF WEB ENGINEERING",
+          "score": 0.0662,
+          "confidence_score": 0.0662,
+          "tfidf_score": 0.0031,
+          "bert_score": 0.1293,
+          "top_keywords": [
+            "defect density",
+            "Repository Metrics",
+            "Simple and Multiple Linear Regressions"
+          ],
+          "evidence_titles": [
+            "PREDICTION OF DEFECT DENSITY FOR OPEN SOURCE SOFTWARE USING REPOSITORY METRICS"
+          ],
+          "evidence_snippets": [
+            "Open source software refers to software with unrestricted access for use or modification. Many software development organizations are using this open source methodology in their..."
+          ],
+          "evidence_subjects": [
+            "Computer Science, Software Engineering",
+            "Computer Science, Theory & Methods",
+            "Computer Science"
+          ],
+          "cluster_label": "Software Engineering",
+          "explanation": "Recommended because similar articles contain keywords such as defect density, Repository Metrics, Simple and Multiple Linear Regressions. Cluster: Software Engineering."
+        },
+        {
+          "journal": "BELL LABS TECHNICAL JOURNAL",
+          "score": 0.0561,
+          "confidence_score": 0.0561,
+          "tfidf_score": 0.0029,
+          "bert_score": 0.1094,
+          "top_keywords": [],
+          "evidence_titles": [
+            "Predicting risk of software changes"
+          ],
+          "evidence_snippets": [
+            "Reducing the number of software failures is one of the most challenging problems of software production. We assume that software development proceeds as a series of changes and..."
+          ],
+          "evidence_subjects": [
+            "Computer Science, Information Systems",
+            "Engineering, Electrical & Electronic",
+            "Telecommunications"
+          ],
+          "cluster_label": "Software Engineering",
+          "explanation": "Recommended because similar articles contain keywords such as related journal terms. Cluster: Software Engineering."
+        }
+      ]
+    },
+    "top_1_by_model": {
+      "tfidf": "IEEE TRANSACTIONS ON SOFTWARE ENGINEERING",
+      "bert": "IEEE TRANSACTIONS ON SOFTWARE ENGINEERING",
+      "ensemble": "IEEE TRANSACTIONS ON SOFTWARE ENGINEERING"
+    }
+  }
+]

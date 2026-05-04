@@ -1,0 +1,4 @@
+model,top_1_accuracy,top_3_accuracy,top_5_accuracy,macro_f1,evaluation_mode
+TF-IDF Recommender,0.3389,0.5244,0.6027,0.2833,abstract_only
+BERT Recommender,0.2752,0.4411,0.5358,0.2317,abstract_only
+Ensemble Recommender,0.2809,0.4507,0.5418,0.2365,abstract_only

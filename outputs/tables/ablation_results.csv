@@ -1,0 +1,6 @@
+representation,text_column,top_1_accuracy,top_3_accuracy,top_5_accuracy,macro_f1
+abstract only,abstract_only_text,0.3387,0.5242,0.6054,0.2806
+title + abstract,title_abstract_text,0.3389,0.5244,0.6027,0.2833
+abstract + keywords,abstract_keywords_text,0.3421,0.5235,0.6016,0.2856
+full combined_text,combined_text,0.3478,0.5235,0.5997,0.2933
+abstract + keywords + subjects,abstract_keywords_subjects_text,0.3213,0.4893,0.5614,0.2708

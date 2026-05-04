@@ -1,0 +1,16 @@
+path,exists
+outputs\system_pipeline_diagram.png,True
+outputs\case_study_examples.json,True
+outputs\confidence_distribution.png,True
+outputs\tables\dataset_summary.csv,True
+outputs\tables\modeling_stats.csv,True
+outputs\tables\model_metrics.csv,True
+outputs\tables\ablation_results.csv,True
+outputs\tables\per_journal_top5.csv,True
+outputs\tables\top_confused_journal_pairs.csv,True
+outputs\tables\class_imbalance_summary.csv,True
+outputs\tables\confidence_summary.csv,True
+outputs\tables\high_confidence_examples.csv,True
+outputs\tables\low_confidence_examples.csv,True
+outputs\tables\cluster_summary.csv,True
+outputs\tables\demo_recommendations.json,True
