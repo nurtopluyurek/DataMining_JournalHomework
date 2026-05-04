@@ -77,6 +77,7 @@ def build_notebook() -> None:
                 filter_modeling_dataset,
                 load_dataset,
                 metrics_row,
+                plot_k_comparison,
                 plot_ablation_results,
                 plot_cluster_projection,
                 plot_confidence_distribution,
@@ -87,6 +88,7 @@ def build_notebook() -> None:
                 plot_top_journals,
                 run_ablation_study,
                 select_demo_examples,
+                summarize_cluster_configurations,
                 summarize_class_imbalance,
                 summarize_confidence_performance,
                 summarize_dataset,
@@ -387,6 +389,49 @@ def build_notebook() -> None:
                 "selected_k": clusterer.best_k_,
                 "best_silhouette": round(clusterer.best_silhouette_, 4),
             }
+            """
+        ),
+        markdown_cell("### K=30 vs K=60 comparison"),
+        code_cell(
+            """
+            clusterer_k30 = TopicClusterer(candidate_clusters=(30,), selection_strategy="max_silhouette")
+            clusterer_k30.fit(modeling_frame)
+
+            k_comparison_frame = summarize_cluster_configurations([clusterer_k30, clusterer])
+            k_comparison_frame.to_csv(OUTPUT_TABLES / "k30_vs_k60_comparison.csv", index=False)
+            (
+                clusterer_k30.summarize_clusters()
+                .sort_values(["size", "cluster"], ascending=[False, True])
+                .head(10)
+                .to_csv(OUTPUT_TABLES / "k30_representative_topics.csv", index=False)
+            )
+            (
+                clusterer.summarize_clusters()
+                .sort_values(["size", "cluster"], ascending=[False, True])
+                .head(10)
+                .to_csv(OUTPUT_TABLES / "k60_representative_topics.csv", index=False)
+            )
+            k_comparison_frame
+            """
+        ),
+        code_cell(
+            """
+            fig, axes = plt.subplots(
+                1,
+                3,
+                figsize=(18, 5),
+                gridspec_kw={"width_ratios": [1.0, 1.3, 1.7]},
+            )
+            plot_k_comparison(clusterer_k30, clusterer, axes=axes)
+            fig.tight_layout()
+            fig.savefig(OUTPUT_FIGURES / "k30_vs_k60_comparison.png", dpi=200, bbox_inches="tight")
+            plt.show()
+            """
+        ),
+        markdown_cell(
+            """
+            This comparison is useful in the report because it shows that `k=60` is not just a larger arbitrary choice.  
+            It yields a higher silhouette score than `k=30`, creates a finer-grained topic structure, and separates narrower research themes that are merged together at lower `k` values.
             """
         ),
         code_cell(

@@ -147,6 +147,9 @@ The final clustering configuration yields 60 fine-grained clusters. Representati
 
 The cluster profiles align well with dominant Web of Science subjects and show that the dataset spans both core computer science theory and applied interdisciplinary engineering topics. Compared with the earlier low-$k$ setting, the $k=60$ solution separates narrower subtopics more clearly and better matches the optimized silhouette criterion.
 
+\subsection{$K=30$ vs $K=60$ Comparison}
+To strengthen the cluster-count decision, the project also compares $k=30$ and $k=60$ directly using silhouette, cluster-size structure, and representative topic examples. This comparison matters because a lower $k$ can still appear visually reasonable while merging distinct subtopics into broader groups. The empirical result shows that $k=60$ achieves the stronger silhouette score and produces a more fine-grained topical partition. The representative topic labels further show that AI, networking, optimization, and software-oriented themes separate more clearly at $k=60$ than at $k=30$.
+
 \begin{figure}[ht]
 \centering
 \includegraphics[width=\linewidth]{../outputs/figures/abstract_model_comparison.png}
@@ -157,8 +160,15 @@ The cluster profiles align well with dominant Web of Science subjects and show t
 \begin{figure}[ht]
 \centering
 \includegraphics[width=\linewidth]{../outputs/figures/cluster_projection.png}
-\caption{Two-dimensional projection of the selected 12-cluster topic structure.}
+\caption{Two-dimensional projection of the selected 60-cluster topic structure.}
 \label{fig:clusters}
+\end{figure}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\linewidth]{../outputs/figures/k30_vs_k60_comparison.png}
+\caption{Direct comparison of $k=30$ and $k=60$ using silhouette, cluster-size structure, and representative topics.}
+\label{fig:kcompare}
 \end{figure}
 
 \section{Discussion}
@@ -167,7 +177,7 @@ The strongest practical result is not the most feature-rich model, but the model
 The project also shows why classical text mining remains competitive in course-scale journal recommendation tasks. Compared with recent deep venue recommenders \cite{pradhan2020hasvrec,liu2022embedding}, the present system is simpler, easier to justify, and fully reproducible on a local CPU environment, yet still achieves useful Top-5 recommendation quality. In particular, journal recommendation is highly keyword-sensitive, and domain-specific terminology appears to matter more than general semantic embedding quality on this dataset.
 
 \section{Conclusion}
-This project delivers a complete computer science journal recommendation workflow with an interpretable topic clustering analysis and a stronger academic evaluation package. Using the provided SQLite database, the final deployment-oriented TF-IDF recommender reaches 0.6027 Top-5 accuracy under the realistic abstract-only scenario. Sentence-BERT and ensemble recommenders remain useful semantic comparison baselines, but they do not outperform the tuned lexical model. Topic clustering further reveals 12 coherent thematic areas across the corpus.
+This project delivers a complete computer science journal recommendation workflow with an interpretable topic clustering analysis and a stronger academic evaluation package. Using the provided SQLite database, the final deployment-oriented TF-IDF recommender reaches 0.6027 Top-5 accuracy under the realistic abstract-only scenario. Sentence-BERT and ensemble recommenders remain useful semantic comparison baselines, but they do not outperform the tuned lexical model. Topic clustering further reveals a fine-grained 60-cluster thematic structure across the corpus, and the explicit $k=30$ vs $k=60$ comparison provides a stronger justification for the final cluster-count decision.
 
 Future work could test transformer embeddings better adapted to scholarly corpora, class-balanced calibration, journal-level prototypes, and larger cross-validation protocols. However, for the assignment goal of a reproducible, explainable, and presentation-ready journal finder, the current implementation is already strong and well-defended.
 

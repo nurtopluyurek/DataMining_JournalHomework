@@ -1,0 +1,3 @@
+k,silhouette,mean_cluster_size,median_cluster_size,min_cluster_size,max_cluster_size,example_topics
+30,0.0858,730.23,672.0,286,1530,"Cluster 29: human, virtual, user, interaction | Cluster 20: logic, language, semantics, verification | Cluster 8: data, mining, information, query"
+60,0.1105,365.12,342.5,121,881,"Cluster 6: data, systems, design, research | Cluster 35: models, model, data, analysis | Cluster 9: sensor, sensor networks, wireless, wireless sensor"

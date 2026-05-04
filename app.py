@@ -14,6 +14,14 @@ if str(SRC_PATH) not in sys.path:
 from journal_recommender import DatasetConfig, JournalRecommendationPipeline, RecommenderConfig
 
 
+DEFAULT_ABSTRACT = (
+    "This paper proposes a machine learning based method for detecting anomalies in network traffic using "
+    "deep neural networks and feature selection. Experimental results show improved detection performance "
+    "compared with traditional classification baselines in dynamic communication environments."
+)
+MODEL_OPTIONS = ["TF-IDF", "BERT", "Hybrid", "Ensemble"]
+
+
 st.set_page_config(
     page_title="CS Journal Recommender",
     page_icon="📚",
@@ -24,37 +32,89 @@ st.markdown(
     """
     <style>
     .stApp {
-        background:
-            radial-gradient(circle at top left, rgba(15, 118, 110, 0.12), transparent 35%),
-            radial-gradient(circle at top right, rgba(29, 78, 216, 0.10), transparent 30%),
-            linear-gradient(180deg, #f8fafc 0%, #eef2ff 100%);
-        font-family: Georgia, "Times New Roman", serif;
+        background: #ffffff;
+        color: #111827;
     }
-    .hero {
-        padding: 1.4rem 1.6rem;
-        border-radius: 18px;
-        background: rgba(255, 255, 255, 0.85);
-        border: 1px solid rgba(15, 23, 42, 0.08);
-        box-shadow: 0 18px 50px rgba(15, 23, 42, 0.06);
-        margin-bottom: 1rem;
+    .block-container {
+        max-width: 1360px;
+        padding-top: 0.9rem;
+        padding-bottom: 0.75rem;
+        padding-left: 1.1rem;
+        padding-right: 1.1rem;
     }
-    .result-card {
-        padding: 1rem 1.1rem;
-        border-radius: 16px;
-        background: rgba(255, 255, 255, 0.92);
-        border: 1px solid rgba(15, 23, 42, 0.08);
-        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
-        margin-bottom: 0.9rem;
+    h1, h2, h3, h4, p {
+        margin-top: 0;
+        margin-bottom: 0;
     }
-    .metric-chip {
-        display: inline-block;
-        padding: 0.25rem 0.55rem;
-        border-radius: 999px;
-        background: #ecfeff;
-        color: #155e75;
+    .app-header {
+        border-bottom: 1px solid #d1d5db;
+        padding-bottom: 0.45rem;
+        margin-bottom: 0.75rem;
+    }
+    .app-title {
+        font-size: 1.15rem;
+        font-weight: 700;
+        color: #111827;
+        line-height: 1.2;
+    }
+    .app-subtitle {
+        font-size: 0.87rem;
+        color: #4b5563;
+        margin-top: 0.2rem;
+    }
+    .meta-line {
+        font-size: 0.8rem;
+        color: #374151;
+        margin-top: 0.35rem;
+    }
+    .panel-label {
+        font-size: 0.82rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.02em;
+        color: #374151;
+        margin-bottom: 0.35rem;
+    }
+    .compact-note {
+        border: 1px solid #d1d5db;
+        border-radius: 8px;
+        padding: 0.5rem 0.65rem;
+        background: #fafafa;
+        font-size: 0.84rem;
+        color: #374151;
+        margin-bottom: 0.5rem;
+    }
+    .result-summary {
+        font-size: 0.8rem;
+        color: #4b5563;
+        margin-bottom: 0.35rem;
+    }
+    div[data-testid="stExpander"] {
+        border: 1px solid #d1d5db;
+        border-radius: 8px;
+        background: #fcfcfc;
+        margin-bottom: 0.35rem;
+    }
+    div[data-testid="stExpander"] details summary {
+        padding-top: 0.1rem;
+        padding-bottom: 0.1rem;
+    }
+    div[data-testid="stExpander"] details summary p {
         font-size: 0.9rem;
-        margin-right: 0.5rem;
-        margin-bottom: 0.4rem;
+    }
+    div[data-testid="stDataFrame"] {
+        font-size: 0.84rem;
+    }
+    div.stButton > button {
+        padding-top: 0.28rem;
+        padding-bottom: 0.28rem;
+        font-size: 0.9rem;
+    }
+    label, .stCaption, .stMarkdown, .stTextArea, .stSelectbox {
+        font-size: 0.9rem;
+    }
+    textarea {
+        font-size: 0.9rem !important;
     }
     </style>
     """,
@@ -70,100 +130,150 @@ def load_pipeline() -> JournalRecommendationPipeline:
     return JournalRecommendationPipeline(config).build(use_cache=True, include_evaluation=False)
 
 
-def render_results(results: pd.DataFrame) -> None:
-    if results.empty:
-        st.warning("No recommendations were generated for the provided abstract.")
-        return
+def run_recommender(
+    pipeline: JournalRecommendationPipeline,
+    model_name: str,
+    abstract_text: str,
+) -> pd.DataFrame:
+    if model_name == "TF-IDF":
+        return pipeline.recommend_journals_tfidf(abstract_text)
+    if model_name == "BERT":
+        return pipeline.recommend_journals_bert(abstract_text)
+    if model_name == "Hybrid":
+        return pipeline.recommend_journals_hybrid(abstract_text)
+    return pipeline.recommend_journals_ensemble(abstract_text)
 
-    for rank, row in results.iterrows():
-        st.markdown(
-            f"""
-            <div class="result-card">
-                <h3 style="margin-bottom:0.3rem;">#{rank + 1} {row['journal_name']}</h3>
-                <div class="metric-chip">Score: {row['score_percent']:.2f}%</div>
-                <div class="metric-chip">Confidence: {row['confidence_label']}</div>
-                <div class="metric-chip">Cluster: {row['cluster_label']}</div>
-                <p style="margin-top:0.8rem; margin-bottom:0.6rem;">{row['explanation']}</p>
-            </div>
-            """,
-            unsafe_allow_html=True,
+
+def build_results_table(results: pd.DataFrame) -> pd.DataFrame:
+    compact = results.copy().reset_index(drop=True)
+    compact.insert(0, "Rank", range(1, len(compact) + 1))
+    compact["Score"] = compact["score_percent"].map(lambda value: f"{value:.2f}%")
+    compact["Confidence"] = compact["confidence_label"]
+    compact["Cluster"] = compact["cluster_label"]
+    compact["Journal"] = compact["journal_name"]
+    return compact[["Rank", "Journal", "Score", "Confidence", "Cluster"]]
+
+
+def format_terms(values: list[str], fallback: str) -> str:
+    if not values:
+        return fallback
+    return ", ".join(values[:6])
+
+
+def render_result_details(results: pd.DataFrame) -> None:
+    for rank, row in results.reset_index(drop=True).iterrows():
+        label = (
+            f"#{rank + 1} {row['journal_name']} | "
+            f"Score {row['score_percent']:.2f}% | "
+            f"{row['confidence_label']} | "
+            f"{row['cluster_label']}"
         )
-        col1, col2 = st.columns(2)
-        with col1:
-            st.caption("Overlapping keywords")
-            st.write(row["overlapping_keywords"] or ["No direct keyword overlap extracted"])
-        with col2:
-            st.caption("Overlapping subjects")
-            st.write(row["overlapping_subjects"] or ["No direct subject overlap extracted"])
-        with st.expander("Supporting similar articles"):
+        with st.expander(label, expanded=False):
+            st.caption(row["explanation"])
+            meta_left, meta_right = st.columns(2, gap="small")
+            with meta_left:
+                st.markdown(
+                    f"**Keywords:** {format_terms(row['overlapping_keywords'], 'No direct keyword overlap extracted')}"
+                )
+            with meta_right:
+                st.markdown(
+                    f"**Subjects:** {format_terms(row['overlapping_subjects'], 'No direct subject overlap extracted')}"
+                )
+
             support = pd.DataFrame(row["supporting_articles"])
             if not support.empty:
-                support["score"] = support["score"].map(lambda value: f"{value:.4f}")
-            st.dataframe(support, use_container_width=True, hide_index=True)
+                support = support.rename(
+                    columns={
+                        "article_id": "Article ID",
+                        "title": "Title",
+                        "year": "Year",
+                        "score": "Score",
+                    }
+                )
+                support["Score"] = support["Score"].map(lambda value: f"{value:.4f}")
+                st.caption("Supporting articles")
+                st.dataframe(
+                    support,
+                    use_container_width=True,
+                    hide_index=True,
+                    height=min(150, 38 * (len(support) + 1)),
+                )
 
 
 pipeline = load_pipeline()
 summary = pipeline.dataset_summary()
 
+if "abstract_input" not in st.session_state:
+    st.session_state["abstract_input"] = DEFAULT_ABSTRACT
+if "last_results" not in st.session_state:
+    st.session_state["last_results"] = pd.DataFrame()
+if "last_model_name" not in st.session_state:
+    st.session_state["last_model_name"] = "Hybrid"
+
+
 st.markdown(
     f"""
-    <div class="hero">
-        <h1 style="margin-bottom:0.25rem;">Computer Science Journal Recommendation System</h1>
-        <p style="margin-bottom:0.7rem;">
-            Enter an academic abstract to retrieve the top 5 most relevant journals, with supporting articles,
-            similarity-based explanations, and cluster context.
-        </p>
-        <div class="metric-chip">Profile: Assignment-aligned</div>
-        <div class="metric-chip">Articles: {summary['records']}</div>
-        <div class="metric-chip">Journals: {summary['journals']}</div>
-        <div class="metric-chip">Years: {summary['year_range'][0]}-{summary['year_range'][1]}</div>
+    <div class="app-header">
+        <div class="app-title">Computer Science Journal Recommendation System</div>
+        <div class="app-subtitle">
+            Compact report-friendly interface for abstract-driven Top-5 journal recommendation.
+        </div>
+        <div class="meta-line">
+            Profile: Assignment-aligned |
+            Articles: {summary['records']} |
+            Journals: {summary['journals']} |
+            Years: {summary['year_range'][0]}-{summary['year_range'][1]}
+        </div>
     </div>
     """,
     unsafe_allow_html=True,
 )
 
-with st.sidebar:
-    st.header("Model")
-    model_name = st.selectbox(
-        "Recommendation strategy",
-        options=["TF-IDF", "BERT", "Hybrid", "Ensemble"],
-        index=2,
-    )
-    st.caption("Hybrid uses 0.6 similarity + 0.2 keyword overlap + 0.2 subject overlap.")
-    st.divider()
-    st.subheader("Dataset Notes")
-    st.write(
-        "The SQLite file is larger than the assignment PDF specification, so the app uses the reproducible "
-        "assignment-aligned subset generated by the project pipeline."
-    )
 
-
-left, right = st.columns([1.35, 0.85])
+left, right = st.columns([0.44, 0.56], gap="small")
 
 with left:
+    st.markdown("<div class='panel-label'>Inputs</div>", unsafe_allow_html=True)
+    st.markdown(
+        """
+        <div class="compact-note">
+            Paste an abstract and select a recommendation model. The interface is intentionally compact so the
+            full input/output view fits into a single academic report screenshot.
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+
+    model_name = st.selectbox(
+        "Recommendation model",
+        options=MODEL_OPTIONS,
+        index=MODEL_OPTIONS.index(st.session_state["last_model_name"]),
+    )
     abstract_input = st.text_area(
         "Article abstract",
-        height=280,
-        placeholder=(
-            "Paste an abstract here. The system will recommend the five most relevant journals "
-            "and show why they were selected."
-        ),
+        key="abstract_input",
+        height=210,
     )
-    run_clicked = st.button("Recommend Journals", type="primary", use_container_width=True)
 
-with right:
-    st.subheader("Demo Abstract")
-    st.write(
-        "Distributed data processing is becoming a reality. Businesses want to stay competitive while integrating "
-        "heterogeneous systems, reducing communication costs, and exploiting caching, replication, and parallelism "
-        "in distributed database environments."
-    )
-    st.subheader("Top Journals in the Training Profile")
-    st.dataframe(
-        pd.DataFrame(summary["top_journals"].items(), columns=["Journal", "Article Count"]),
-        use_container_width=True,
-        hide_index=True,
-    )
+    action_left, action_right = st.columns(2, gap="small")
+    run_clicked = action_left.button("Run Recommendation", type="primary", use_container_width=True)
+    demo_clicked = action_right.button("Load Demo Abstract", use_container_width=True)
+
+    if demo_clicked:
+        st.session_state["abstract_input"] = DEFAULT_ABSTRACT
+        st.rerun()
+
+    with st.expander("Dataset notes", expanded=False):
+        st.write(
+            "The app uses the assignment-aligned subset generated by the pipeline. "
+            "This subset is derived from the accessible SQLite file rather than the smaller PDF description."
+        )
+        st.dataframe(
+            pd.DataFrame(summary["top_journals"].items(), columns=["Journal", "Article Count"]),
+            use_container_width=True,
+            hide_index=True,
+            height=235,
+        )
 
 
 if run_clicked:
@@ -171,13 +281,37 @@ if run_clicked:
         st.warning("Enter an abstract before running the recommender.")
     else:
         with st.spinner("Scoring journals against the article corpus..."):
-            if model_name == "TF-IDF":
-                results = pipeline.recommend_journals_tfidf(abstract_input)
-            elif model_name == "BERT":
-                results = pipeline.recommend_journals_bert(abstract_input)
-            elif model_name == "Hybrid":
-                results = pipeline.recommend_journals_hybrid(abstract_input)
-            else:
-                results = pipeline.recommend_journals_ensemble(abstract_input)
-        st.subheader("Recommendations")
-        render_results(results)
+            st.session_state["last_results"] = run_recommender(pipeline, model_name, abstract_input)
+            st.session_state["last_model_name"] = model_name
+
+
+with right:
+    st.markdown("<div class='panel-label'>Top-5 Recommendations</div>", unsafe_allow_html=True)
+    results = st.session_state["last_results"]
+
+    if results.empty:
+        st.info("Run the recommender to display the Top-5 journals here.")
+        st.dataframe(
+            pd.DataFrame(summary["top_journals"].items(), columns=["Journal", "Article Count"]).head(5),
+            use_container_width=True,
+            hide_index=True,
+            height=210,
+        )
+    else:
+        st.markdown(
+            f"""
+            <div class="result-summary">
+                Model: {st.session_state['last_model_name']} |
+                Results: {len(results)} journals |
+                Query length: {len(abstract_input.split())} words
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
+        st.dataframe(
+            build_results_table(results),
+            use_container_width=True,
+            hide_index=True,
+            height=240,
+        )
+        render_result_details(results)

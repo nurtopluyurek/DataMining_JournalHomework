@@ -4,6 +4,7 @@ import sys
 import unittest
 from pathlib import Path
 
+import matplotlib.pyplot as plt
 import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -14,10 +15,12 @@ if str(SRC_DIR) not in sys.path:
 from project_lib import (
     EnsembleJournalRecommender,
     JournalRecommender,
+    plot_k_comparison,
     SemanticJournalRecommender,
     TopicClusterer,
     clean_text,
     filter_modeling_dataset,
+    summarize_cluster_configurations,
 )
 
 
@@ -227,6 +230,35 @@ class ProjectLibTests(unittest.TestCase):
         summary = clusterer.summarize_clusters()
         self.assertFalse(summary.empty)
         self.assertIn("top_terms", summary.columns)
+
+    def test_cluster_comparison_helpers_smoke(self) -> None:
+        frame = make_mock_frame()
+        clusterer_small = TopicClusterer(
+            text_column="title_abstract_text",
+            candidate_clusters=(2,),
+            svd_components=2,
+            max_features=500,
+            min_df=1,
+            silhouette_sample_size=6,
+        )
+        clusterer_large = TopicClusterer(
+            text_column="title_abstract_text",
+            candidate_clusters=(3,),
+            svd_components=2,
+            max_features=500,
+            min_df=1,
+            silhouette_sample_size=6,
+        )
+        clusterer_small.fit(frame)
+        clusterer_large.fit(frame)
+
+        summary = summarize_cluster_configurations([clusterer_small, clusterer_large])
+        self.assertEqual(len(summary), 2)
+        self.assertIn("example_topics", summary.columns)
+
+        figure, axes = plt.subplots(1, 3, figsize=(12, 4))
+        plot_k_comparison(clusterer_small, clusterer_large, axes=axes)
+        figure.clf()
 
     def test_semantic_recommender_smoke(self) -> None:
         frame = make_mock_frame()

@@ -1222,6 +1222,97 @@ def plot_cluster_projection(clusterer: TopicClusterer, *, ax: Axes | None = None
     return axis
 
 
+def _sample_topic_text(clusterer: TopicClusterer, *, top_n: int = 3, top_terms: int = 4) -> list[str]:
+    summary = clusterer.summarize_clusters().sort_values(["size", "cluster"], ascending=[False, True]).head(top_n)
+    topic_lines: list[str] = []
+    for _, row in summary.iterrows():
+        terms = [term.strip() for term in str(row["top_terms"]).split(",") if term.strip()][:top_terms]
+        topic_lines.append(f"Cluster {int(row['cluster'])}: {', '.join(terms)}")
+    return topic_lines
+
+
+def summarize_cluster_configurations(clusterers: Iterable[TopicClusterer]) -> pd.DataFrame:
+    rows: list[dict[str, Any]] = []
+    for clusterer in clusterers:
+        cluster_summary = clusterer.summarize_clusters()
+        cluster_sizes = cluster_summary["size"].astype(int)
+        rows.append(
+            {
+                "k": int(clusterer.best_k_),
+                "silhouette": round(float(clusterer.best_silhouette_), 4),
+                "mean_cluster_size": round(float(cluster_sizes.mean()), 2),
+                "median_cluster_size": round(float(cluster_sizes.median()), 2),
+                "min_cluster_size": int(cluster_sizes.min()),
+                "max_cluster_size": int(cluster_sizes.max()),
+                "example_topics": " | ".join(_sample_topic_text(clusterer)),
+            }
+        )
+    return pd.DataFrame(rows).sort_values("k").reset_index(drop=True)
+
+
+def plot_k_comparison(
+    clusterer_a: TopicClusterer,
+    clusterer_b: TopicClusterer,
+    *,
+    axes: np.ndarray | None = None,
+) -> np.ndarray:
+    if axes is None:
+        _, axes = plt.subplots(1, 3, figsize=(18, 5), gridspec_kw={"width_ratios": [1.0, 1.3, 1.7]})
+
+    clusterers = [clusterer_a, clusterer_b]
+    colors = ["#1c7ed6", "#e8590c"]
+    labels = [f"k={clusterer.best_k_}" for clusterer in clusterers]
+    summary = summarize_cluster_configurations(clusterers)
+
+    axes[0].bar(labels, summary["silhouette"], color=colors, width=0.55)
+    axes[0].set_ylim(0, max(summary["silhouette"]) * 1.15)
+    axes[0].set_title("Silhouette Comparison")
+    axes[0].set_ylabel("Silhouette Score")
+    axes[0].grid(axis="y", alpha=0.2)
+
+    for label, clusterer, color in zip(labels, clusterers, colors, strict=False):
+        cluster_sizes = clusterer.summarize_clusters()["size"].sort_values(ascending=False).reset_index(drop=True)
+        axes[1].plot(
+            np.arange(1, len(cluster_sizes) + 1),
+            cluster_sizes.to_numpy(),
+            linewidth=2.2,
+            color=color,
+            label=label,
+        )
+    axes[1].set_title("Sorted Cluster Sizes")
+    axes[1].set_xlabel("Cluster Rank")
+    axes[1].set_ylabel("Articles per Cluster")
+    axes[1].legend()
+    axes[1].grid(alpha=0.2)
+
+    axes[2].axis("off")
+    y_position = 0.95
+    for label, clusterer, color in zip(labels, clusterers, colors, strict=False):
+        axes[2].text(
+            0.0,
+            y_position,
+            f"{label} | silhouette={clusterer.best_silhouette_:.4f}",
+            fontsize=11,
+            fontweight="bold",
+            color=color,
+            transform=axes[2].transAxes,
+        )
+        y_position -= 0.08
+        for topic_text in _sample_topic_text(clusterer):
+            axes[2].text(
+                0.02,
+                y_position,
+                f"- {topic_text}",
+                fontsize=10,
+                transform=axes[2].transAxes,
+                wrap=True,
+            )
+            y_position -= 0.08
+        y_position -= 0.06
+    axes[2].set_title("Representative Topic Examples")
+    return axes
+
+
 def select_demo_examples(
     frame: pd.DataFrame,
     predictions: pd.DataFrame,

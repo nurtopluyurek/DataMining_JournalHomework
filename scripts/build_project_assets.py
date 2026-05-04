@@ -24,6 +24,7 @@ from project_lib import (  # noqa: E402
     filter_modeling_dataset,
     load_dataset,
     metrics_row,
+    plot_k_comparison,
     plot_ablation_results,
     plot_cluster_projection,
     plot_confidence_distribution,
@@ -35,6 +36,7 @@ from project_lib import (  # noqa: E402
     select_demo_examples,
     run_ablation_study,
     summarize_confidence_performance,
+    summarize_cluster_configurations,
     summarize_class_imbalance,
     summarize_dataset,
     train_test_split_by_journal,
@@ -83,6 +85,8 @@ def build_assets(sqlite_path: str | Path = DEFAULT_SQLITE_PATH) -> None:
     modeling_frame, modeling_stats = filter_modeling_dataset(dataset_frame)
     clusterer = TopicClusterer()
     clusterer.fit(modeling_frame)
+    clusterer_k30 = TopicClusterer(candidate_clusters=(30,), selection_strategy="max_silhouette")
+    clusterer_k30.fit(modeling_frame)
     modeling_frame = attach_cluster_annotations(modeling_frame, clusterer)
     train_frame, test_frame = train_test_split_by_journal(modeling_frame)
 
@@ -165,6 +169,20 @@ def build_assets(sqlite_path: str | Path = DEFAULT_SQLITE_PATH) -> None:
     metrics_frame.to_csv(tables_dir / "model_metrics.csv", index=False)
     clusterer.summarize_clusters().to_csv(tables_dir / "cluster_summary.csv", index=False)
     clusterer.silhouette_table_.to_csv(tables_dir / "silhouette_scores.csv", index=False)
+    k_comparison_frame = summarize_cluster_configurations([clusterer_k30, clusterer])
+    k_comparison_frame.to_csv(tables_dir / "k30_vs_k60_comparison.csv", index=False)
+    (
+        clusterer_k30.summarize_clusters()
+        .sort_values(["size", "cluster"], ascending=[False, True])
+        .head(10)
+        .to_csv(tables_dir / "k30_representative_topics.csv", index=False)
+    )
+    (
+        clusterer.summarize_clusters()
+        .sort_values(["size", "cluster"], ascending=[False, True])
+        .head(10)
+        .to_csv(tables_dir / "k60_representative_topics.csv", index=False)
+    )
 
     per_journal_frame = compute_per_journal_top5(tfidf_result.predictions, min_test_samples=5)
     per_journal_frame.to_csv(tables_dir / "per_journal_top5.csv", index=False)
@@ -230,6 +248,15 @@ def build_assets(sqlite_path: str | Path = DEFAULT_SQLITE_PATH) -> None:
     plot_cluster_projection(clusterer, ax=cluster_axis)
     _save_figure(cluster_figure, figures_dir / "cluster_projection.png")
 
+    k_comparison_figure, k_comparison_axes = plt.subplots(
+        1,
+        3,
+        figsize=(18, 5),
+        gridspec_kw={"width_ratios": [1.0, 1.3, 1.7]},
+    )
+    plot_k_comparison(clusterer_k30, clusterer, axes=k_comparison_axes)
+    _save_figure(k_comparison_figure, figures_dir / "k30_vs_k60_comparison.png")
+
     imbalance_figure, imbalance_axis = plt.subplots(figsize=(10, 5))
     plot_journal_imbalance(class_counts_frame, ax=imbalance_axis)
     _save_figure(imbalance_figure, figures_dir / "journal_imbalance.png")
@@ -254,9 +281,13 @@ def build_assets(sqlite_path: str | Path = DEFAULT_SQLITE_PATH) -> None:
         tables_dir / "high_confidence_examples.csv",
         tables_dir / "low_confidence_examples.csv",
         tables_dir / "cluster_summary.csv",
+        tables_dir / "k30_vs_k60_comparison.csv",
+        tables_dir / "k30_representative_topics.csv",
+        tables_dir / "k60_representative_topics.csv",
         outputs_dir / "system_pipeline_diagram.png",
         outputs_dir / "case_study_examples.json",
         outputs_dir / "confidence_distribution.png",
+        figures_dir / "k30_vs_k60_comparison.png",
     ]
     manifest_frame = pd.DataFrame(
         [{"path": str(path.relative_to(ROOT)), "exists": path.exists()} for path in expected_paths]

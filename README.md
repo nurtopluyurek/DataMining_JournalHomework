@@ -172,3 +172,4 @@ outputs/cache
 - The notebook and the report are written in English because the assignment expects an academic submission format.
 - Notebook execution on Windows required `JUPYTER_ALLOW_INSECURE_WRITES=true` because the local Jupyter runtime attempted to apply unsupported secure-write permissions.
 - The Sentence-BERT model used in this project is `all-MiniLM-L6-v2`.
+- The clustering section now also includes an explicit `K=30 vs K=60` comparison to justify the final choice of `k=60`.
