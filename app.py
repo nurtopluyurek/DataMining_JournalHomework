@@ -59,10 +59,10 @@ st.markdown(
 
     .block-container {
         max-width: 1380px;
-        padding-top: 0.65rem;
-        padding-bottom: 0.55rem;
-        padding-left: 0.9rem;
-        padding-right: 0.9rem;
+        padding-top: 0.42rem;
+        padding-bottom: 0.28rem;
+        padding-left: 0.72rem;
+        padding-right: 0.72rem;
     }
 
     h1, h2, h3, h4, p {
@@ -70,13 +70,13 @@ st.markdown(
     }
 
     .app-header {
-        margin-bottom: 0.55rem;
-        padding: 0.5rem 0.1rem 0.55rem 0.1rem;
+        margin-bottom: 0.34rem;
+        padding: 0.28rem 0.05rem 0.32rem 0.05rem;
         border-bottom: 1px solid rgba(124, 58, 237, 0.12);
     }
 
     .app-title {
-        font-size: 1.1rem;
+        font-size: 0.98rem;
         line-height: 1.1;
         font-weight: 700;
         color: var(--text);
@@ -84,13 +84,13 @@ st.markdown(
 
     .app-subtitle {
         margin-top: 0.12rem;
-        font-size: 0.82rem;
+        font-size: 0.72rem;
         color: var(--muted);
     }
 
     .app-stats {
-        margin-top: 0.28rem;
-        font-size: 0.76rem;
+        margin-top: 0.16rem;
+        font-size: 0.68rem;
         color: #5b4f71;
         letter-spacing: 0.01em;
     }
@@ -99,71 +99,72 @@ st.markdown(
         background: var(--panel);
         border: 1px solid var(--border);
         border-radius: 12px;
-        padding: 0.7rem 0.75rem;
+        padding: 0.42rem 0.48rem;
         box-shadow: var(--shadow);
     }
 
     .section-label {
-        font-size: 0.74rem;
+        font-size: 0.67rem;
         font-weight: 700;
         text-transform: uppercase;
         letter-spacing: 0.06em;
         color: #7048b4;
-        margin-bottom: 0.35rem;
+        margin-bottom: 0.18rem;
     }
 
     .example-box {
         border: 1px solid var(--border-strong);
         border-radius: 10px;
         background: linear-gradient(180deg, rgba(255,255,255,0.94) 0%, rgba(252,231,243,0.45) 100%);
-        padding: 0.5rem 0.58rem;
-        font-size: 0.79rem;
-        line-height: 1.35;
+        padding: 0.34rem 0.42rem;
+        font-size: 0.7rem;
+        line-height: 1.24;
         color: #3d2d57;
-        margin-bottom: 0.45rem;
+        margin-bottom: 0.24rem;
     }
 
     .compact-note {
-        font-size: 0.76rem;
+        font-size: 0.7rem;
         color: var(--muted);
-        margin-bottom: 0.32rem;
+        margin-bottom: 0.18rem;
     }
 
     .result-card {
         background: var(--panel-strong);
         border: 1px solid rgba(124, 58, 237, 0.14);
         border-radius: 12px;
-        padding: 0.45rem 0.55rem;
-        margin-bottom: 0.32rem;
+        padding: 0.18rem 0.34rem;
+        margin-bottom: 0.12rem;
         box-shadow: 0 4px 14px rgba(76, 29, 149, 0.04);
     }
 
     .result-row {
         display: flex;
         align-items: center;
-        gap: 0.32rem;
+        gap: 0.18rem;
         flex-wrap: wrap;
+        min-height: 1.15rem;
     }
 
     .rank-text {
-        font-size: 0.88rem;
+        font-size: 0.75rem;
         font-weight: 700;
         color: var(--purple);
     }
 
     .journal-text {
-        font-size: 0.86rem;
+        font-size: 0.75rem;
         font-weight: 700;
         color: var(--text);
-        margin-right: 0.2rem;
+        margin-right: 0.08rem;
     }
 
     .metric-chip {
         display: inline-flex;
         align-items: center;
-        font-size: 0.72rem;
+        font-size: 0.62rem;
         line-height: 1;
-        padding: 0.22rem 0.42rem;
+        padding: 0.12rem 0.24rem;
         border-radius: 999px;
         border: 1px solid transparent;
         white-space: nowrap;
@@ -191,8 +192,8 @@ st.markdown(
         border: 1px dashed rgba(124, 58, 237, 0.20);
         border-radius: 12px;
         background: rgba(255,255,255,0.72);
-        padding: 0.8rem 0.75rem;
-        font-size: 0.8rem;
+        padding: 0.48rem 0.52rem;
+        font-size: 0.71rem;
         color: var(--muted);
     }
 
@@ -200,40 +201,44 @@ st.markdown(
         border: 1px solid rgba(124, 58, 237, 0.12);
         border-radius: 10px;
         background: rgba(255, 255, 255, 0.75);
-        margin-bottom: 0.22rem;
+        margin-bottom: 0.08rem;
     }
 
     div[data-testid="stExpander"] details summary {
-        padding-top: 0.03rem;
-        padding-bottom: 0.03rem;
+        padding-top: 0.0rem;
+        padding-bottom: 0.0rem;
     }
 
     div[data-testid="stExpander"] details summary p {
-        font-size: 0.8rem;
+        font-size: 0.69rem;
         font-weight: 600;
         color: #513476;
     }
 
+    div[data-testid="stExpanderDetails"] {
+        font-size: 0.7rem;
+    }
+
     div[data-testid="stDataFrame"] {
-        font-size: 0.78rem;
+        font-size: 0.7rem;
     }
 
     div[data-baseweb="select"] > div {
-        min-height: 2rem;
+        min-height: 1.72rem;
         border-radius: 10px;
         border-color: rgba(124, 58, 237, 0.18);
         background: rgba(255,255,255,0.9);
     }
 
     textarea {
-        font-size: 0.84rem !important;
-        line-height: 1.35 !important;
+        font-size: 0.75rem !important;
+        line-height: 1.22 !important;
     }
 
     div.stButton > button {
-        min-height: 2rem;
-        padding: 0.2rem 0.75rem;
-        font-size: 0.8rem;
+        min-height: 1.72rem;
+        padding: 0.08rem 0.48rem;
+        font-size: 0.7rem;
         font-weight: 600;
         border-radius: 10px;
         box-shadow: none;
@@ -252,13 +257,13 @@ st.markdown(
     }
 
     div[data-testid="stHorizontalBlock"] {
-        gap: 0.55rem;
+        gap: 0.35rem;
     }
 
     .stMarkdown p,
     .stCaption,
     label {
-        font-size: 0.82rem;
+        font-size: 0.72rem;
     }
     </style>
     """,
@@ -295,7 +300,7 @@ def render_result_card(rank: int, row: pd.Series) -> None:
             <div class="result-row">
                 <span class="rank-text">#{rank}</span>
                 <span class="journal-text">{row['journal_name']}</span>
-                <span class="metric-chip chip-score">Score: {row['score_percent']:.0f}%</span>
+                <span class="metric-chip chip-score">{row['score_percent']:.0f}%</span>
                 <span class="metric-chip chip-confidence">Confidence: {row['confidence_label']}</span>
                 <span class="metric-chip chip-cluster">Cluster: {row['cluster_label']}</span>
             </div>
@@ -304,7 +309,7 @@ def render_result_card(rank: int, row: pd.Series) -> None:
         unsafe_allow_html=True,
     )
 
-    with st.expander(f"Explanation #{rank}", expanded=False):
+    with st.expander("Details", expanded=False):
         st.caption(row["explanation"])
         st.markdown(
             f"**Keywords:** {', '.join(row['overlapping_keywords'][:6]) if row['overlapping_keywords'] else 'No direct keyword overlap extracted'}"
@@ -372,7 +377,7 @@ with left:
         unsafe_allow_html=True,
     )
 
-    control_left, control_right = st.columns([0.62, 0.38], gap="small")
+    control_left, control_right, control_third = st.columns([0.38, 0.34, 0.28], gap="small")
     with control_left:
         model_name = st.selectbox(
             "Model",
@@ -381,19 +386,19 @@ with left:
             label_visibility="collapsed",
         )
     with control_right:
-        example_clicked = st.button("Use Example Abstract", type="secondary", use_container_width=True)
+        run_clicked = st.button("Recommend", type="primary", use_container_width=True)
+    with control_third:
+        example_clicked = st.button("Use Example", type="secondary", use_container_width=True)
 
     abstract_input = st.text_area(
         "Abstract",
         key="abstract_input",
-        height=120,
+        height=92,
         label_visibility="collapsed",
         placeholder="Paste an academic abstract here...",
     )
 
-    action_left, action_right = st.columns([0.54, 0.46], gap="small")
-    run_clicked = action_left.button("Recommend Journals", type="primary", use_container_width=True)
-    clear_clicked = action_right.button("Clear", type="secondary", use_container_width=True)
+    clear_clicked = st.button("Clear", type="secondary", use_container_width=False)
 
     if example_clicked:
         st.session_state["abstract_input"] = EXAMPLE_ABSTRACT
@@ -403,16 +408,6 @@ with left:
         st.session_state["abstract_input"] = ""
         st.session_state["last_results"] = pd.DataFrame()
         st.rerun()
-
-    st.markdown(
-        f"""
-        <div class="compact-note">
-            Dataset profile loaded: {summary['records']} records, {summary['journals']} journals.
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
-
 
 if run_clicked:
     if not abstract_input.strip():
@@ -437,5 +432,13 @@ with right:
             unsafe_allow_html=True,
         )
     else:
-        for idx, (_, row) in enumerate(results.iterrows(), start=1):
+        visible_results = results.head(3)
+        hidden_results = results.iloc[3:5]
+
+        for idx, (_, row) in enumerate(visible_results.iterrows(), start=1):
             render_result_card(idx, row)
+
+        if not hidden_results.empty:
+            with st.expander("Show more", expanded=False):
+                for idx, (_, row) in enumerate(hidden_results.iterrows(), start=4):
+                    render_result_card(idx, row)
